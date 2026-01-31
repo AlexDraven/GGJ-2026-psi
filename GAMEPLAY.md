@@ -27,8 +27,9 @@ El jugador se mueve por el mundo, se acerca a **NPCs** u **objetos interactuable
 
 - **Efecto de cámara:** PsychedelicCameraEffect lee el nivel de psicodelia de GameController y aplica esa intensidad al shader/post-proceso.
 - **Cara Doom:** El componente de la cara del personaje lee el nivel de felicidad de GameController y muestra la expresión o frame correspondiente.
+- **Sonidos:** SoundController lee el nivel de psicodelia y el de felicidad y aplica el volumen de dos audios específicos (uno por nivel).
 
-Así, el diálogo (y cualquier otro sistema) solo actualiza los valores en GameController; la cámara y la cara reaccionan leyendo ese estado.
+Así, el diálogo (y cualquier otro sistema) solo actualiza los valores en GameController; la cámara, la cara y el sonido reaccionan leyendo ese estado.
 
 ### Psicodelia
 
@@ -88,9 +89,31 @@ GameController debe **llevar** el estado de psicodelia y felicidad (p. ej. `Psyc
 - **Objetivo:** Una UI fija en la parte **inferior central** que muestra la **cara del personaje** (sprite/animación). El componente de la cara **lee** el nivel de felicidad de GameController y elige la expresión o frame (p. ej. muy bajo = triste, medio = neutro, alto = feliz).
 - **No existe aún:** No hay componente de “face UI”. Especificación: posición (abajo centro), cara del protagonista; el valor de felicidad lo lleva GameController y el componente de la cara solo lo lee para mostrar el frame correcto.
 
+### 4.6 Sonidos
+
+SoundController lee los niveles de GameController y aplica el volumen de dos audios (uno por psicodelia, otro por felicidad). Ver **sección 5. Sonidos** para el detalle.
+
 ---
 
-## 5. Estado actual del código
+## 5. Sonidos
+
+El mismo objeto (o contexto) que tiene **GameController** debe tener otro script **SoundController** (`Assets/scripts/SoundController.cs`). SoundController es un componente separado de GameController; puede vivir en el mismo GameObject que GameController o en otro que tenga referencia a GameController.
+
+- **Fuente de verdad:** SoundController **lee** los niveles de GameController (no los modifica). Igual que PsychedelicCameraEffect y la cara Doom.
+- **Psicodelia → audio:** El **nivel de psicodelia** (GameController.PsychedeliaLevel) se usa como **nivel de volumen** de un **audio específico** (p. ej. un AudioSource o pista asignada en el inspector). A mayor psicodelia, mayor volumen de ese audio; a menor, menor volumen.
+- **Felicidad → audio:** El **nivel de felicidad** (GameController.HappinessLevel) se usa como **nivel de volumen** de **otro audio específico**. Misma lógica: el nivel en GameController determina el volumen de esa pista.
+- **Resumen:** Dos audios distintos: uno gobernado por psicodelia, otro por felicidad. SoundController en cada frame (o cuando cambien los niveles) lee GameController y aplica `PsychedeliaLevel` al volumen del audio de psicodelia y `HappinessLevel` al volumen del audio de felicidad.
+
+```mermaid
+flowchart LR
+    GC[GameController] --> SC[SoundController]
+    SC -->|"PsychedeliaLevel"| AudioA[Audio psicodelia]
+    SC -->|"HappinessLevel"| AudioB[Audio felicidad]
+```
+
+---
+
+## 6. Estado actual del código
 
 | Concepto | Archivo / componente | Estado |
 |----------|----------------------|--------|
@@ -103,12 +126,14 @@ GameController debe **llevar** el estado de psicodelia y felicidad (p. ej. `Psyc
 | Nivel felicidad (estado global) | GameController (HappinessLevel) | Por implementar; cara Doom lee de aquí |
 | Cara personaje (Doom) | — | Por implementar |
 | Objetos interactuables | — | Por implementar (mismo contrato que NPC: diálogo + opciones + deltas) |
+| Sonido según psicodelia/felicidad | SoundController (lee niveles de GameController, aplica volumen a 2 audios) | Por implementar |
 
 ---
 
-## 6. Especificaciones para agentes IA
+## 7. Especificaciones para agentes IA
 
 - **Ubicación de datos de diálogo:** NpcController en el inspector (y en el futuro, un componente equivalente en objetos). Extensión: por cada opción, dos valores numéricos (delta psicodelia, delta felicidad).
 - **Dónde persistir niveles:** **GameController** lleva el estado con `PsychedeliaLevel` y `HappinessLevel`. PsychedelicCameraEffect lee el nivel de psicodelia de GameController y aplica esa intensidad al efecto de cámara; el componente de la cara Doom lee el nivel de felicidad de GameController y aplica la expresión/frame correspondiente.
 - **Contrato de DialogueManager al confirmar opción:** Recibir el índice elegido y el `owner` (NpcController u objeto); el owner proporciona los deltas para ese índice; el juego aplica los deltas y actualiza UI/cámara.
 - **Input:** Se usa Input System con action maps `"Player"` y `"UI"`; durante el diálogo el movimiento está deshabilitado y la navegación de opciones usa `"UI/Navigate"`.
+- **Sonidos:** **SoundController** es un script que lee `PsychedeliaLevel` y `HappinessLevel` de GameController y asigna esos valores al volumen de dos AudioSources (o audios) configurados en el inspector: uno para psicodelia, otro para felicidad.
