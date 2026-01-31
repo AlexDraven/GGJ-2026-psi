@@ -1101,15 +1101,18 @@ MonoBehaviour:
   dialogueChoices:
   - dale loco
   - no las necesito
+  - no las merezco...
   psychedeliaDeltas:
   - 1
   - -1
   happinessDeltas:
   - -1
-  - 1
+  - 0
+  - -1
   responseAfterChoice:
   - disfrutaaaaaaaaa!!!!
   - 'te las daba gratis... '
+  - 'we re emo el loco '
 --- !u!1 &1393440953
 GameObject:
   m_ObjectHideFlags: 0

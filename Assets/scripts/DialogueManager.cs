@@ -157,7 +157,6 @@ public class DialogueManager : MonoBehaviour
     void ShowChoices()
     {
         Debug.Log("[DialogueManager] Mostrando opciones: " + (choices != null ? choices.Length : 0));
-        dialogueUI.SetDialogueText("");
         dialogueUI.ShowOptions(choices, choiceSelectedIndex);
     }
 
