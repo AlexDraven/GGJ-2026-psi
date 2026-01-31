@@ -21,13 +21,22 @@ El jugador se mueve por el mundo, se acerca a **NPCs** u **objetos interactuable
 - **Nivel de psicodelia**
 - **Nivel de felicidad**
 
+### Estado global: GameController
+
+**GameController** (`Assets/scripts/GameController.cs`) es la **fuente de verdad** del estado de psicodelia y felicidad del personaje. Lleva los niveles (p. ej. `PsychedeliaLevel` y `HappinessLevel`) y otros sistemas **leen** de GameController para aplicar ese estado:
+
+- **Efecto de cámara:** PsychedelicCameraEffect lee el nivel de psicodelia de GameController y aplica esa intensidad al shader/post-proceso.
+- **Cara Doom:** El componente de la cara del personaje lee el nivel de felicidad de GameController y muestra la expresión o frame correspondiente.
+
+Así, el diálogo (y cualquier otro sistema) solo actualiza los valores en GameController; la cámara y la cara reaccionan leyendo ese estado.
+
 ### Psicodelia
 
-Valor numérico (p. ej. 0–1 o 0–100) que controla la **intensidad de un efecto visual en pantalla completa** (shader/post-proceso en cámara). A mayor nivel, más “psicodélico” se ve **todo el juego**. Es un único efecto de cámara/post-proceso cuya intensidad depende del nivel de psicodelia.
+Valor numérico (p. ej. 0–1 o 0–100) que GameController mantiene y que controla la **intensidad de un efecto visual en pantalla completa** (shader/post-proceso en cámara). El efecto de cámara (PsychedelicCameraEffect) **lee** el nivel de psicodelia de GameController y aplica esa intensidad. A mayor nivel, más “psicodélico” se ve **todo el juego**.
 
 ### Felicidad
 
-Valor numérico que se refleja en la **cara del personaje** mostrada en pantalla: UI fija en la parte **inferior central** (estilo Doom: retrato/cara que cambia según estado). No es un HUD genérico; es concretamente la **cara del protagonista**. La expresión o el frame de esa cara depende del nivel de felicidad (p. ej. rangos: muy bajo = triste, medio = neutro, alto = feliz).
+Valor numérico que GameController mantiene y que se refleja en la **cara del personaje** mostrada en pantalla: UI fija en la parte **inferior central** (estilo Doom). El componente de la cara **lee** el nivel de felicidad de GameController y muestra la expresión o frame correspondiente. No es un HUD genérico; es la **cara del protagonista** (p. ej. rangos: muy bajo = triste, medio = neutro, alto = feliz).
 
 ---
 
@@ -65,15 +74,19 @@ flowchart LR
 - **Existente:** `Assets/scripts/DialogueManager.cs` — `StartDialogue(speaker, lines, choices, owner)`, typewriter, navegación de opciones (UI/joystick), `Advance()` al confirmar. Al elegir opción: si `dialogueOwner.ChoiceIndexThatTriggersEffect == choiceSelectedIndex` llama a `PsychedelicCameraEffect.Instance.AddIntensity(0.2f)` y guarda `GameController.Instance.LastDialogueResponse`.
 - **Objetivo:** En lugar de un solo “índice que activa efecto”, cada opción debe tener **deltas configurables** (psicodelia y felicidad). Al confirmar opción, el juego aplica esos deltas a los niveles globales y la cámara/cara se actualizan según esos niveles.
 
-### 4.3 Nivel de psicodelia y efecto de cámara
+### 4.3 GameController: estado de psicodelia y felicidad
 
-- **Existente:** `Assets/scripts/PsychedelicCameraEffect.cs` — Singleton en la cámara, `intensity` 0–1, `AddIntensity(amount)`, decay opcional, shader `Hidden/PsychedelicEffect` en `OnRenderImage`. El juego ya aplica un efecto visual a toda la pantalla según una intensidad.
-- **Objetivo:** Tratar esa intensidad como el **nivel de psicodelia** del personaje (o derivarlo de un “nivel de psicodelia” en GameController/PlayerState que luego se mapee a intensidad de cámara). Las elecciones de diálogo suben o bajan ese nivel; la cámara siempre refleja el nivel actual.
+GameController debe **llevar** el estado de psicodelia y felicidad (p. ej. `PsychedeliaLevel`, `HappinessLevel`) y exponerlo para que otros sistemas lo lean. El efecto de cámara y la cara Doom **no** mantienen su propio estado; **aplican** el estado que leen de GameController. Así, al confirmar una opción de diálogo, DialogueManager (u otro sistema) actualiza solo GameController; PsychedelicCameraEffect y el componente de la cara reaccionan en sus `Update`/`LateUpdate` leyendo esos valores.
 
-### 4.4 Felicidad y cara del personaje (estilo Doom)
+### 4.4 Nivel de psicodelia y efecto de cámara
 
-- **Objetivo:** Una UI fija en la parte **inferior central** de la pantalla que muestra la **cara del personaje** (sprite/animación). La expresión o el frame de esa cara depende del **nivel de felicidad** (p. ej. rangos: muy bajo = triste, medio = neutro, alto = feliz).
-- **No existe aún:** No hay componente de “face UI” ni variable de felicidad en el código. Especificación: posición (abajo centro), que es la cara del protagonista, y que el valor de felicidad (a persistir en GameController o similar) determina qué se muestra.
+- **Existente:** `Assets/scripts/PsychedelicCameraEffect.cs` — Singleton en la cámara, `intensity` 0–1, `AddIntensity(amount)`, decay opcional, shader `Hidden/PsychedelicEffect` en `OnRenderImage`.
+- **Objetivo:** La intensidad del efecto debe derivar del **nivel de psicodelia en GameController**. PsychedelicCameraEffect lee `GameController.Instance.PsychedeliaLevel` (o equivalente) y aplica ese valor al shader. Las elecciones de diálogo modifican el nivel en GameController; la cámara siempre refleja ese nivel.
+
+### 4.5 Felicidad y cara del personaje (estilo Doom)
+
+- **Objetivo:** Una UI fija en la parte **inferior central** que muestra la **cara del personaje** (sprite/animación). El componente de la cara **lee** el nivel de felicidad de GameController y elige la expresión o frame (p. ej. muy bajo = triste, medio = neutro, alto = feliz).
+- **No existe aún:** No hay componente de “face UI”. Especificación: posición (abajo centro), cara del protagonista; el valor de felicidad lo lleva GameController y el componente de la cara solo lo lee para mostrar el frame correcto.
 
 ---
 
@@ -84,10 +97,10 @@ flowchart LR
 | Diálogo con opciones | DialogueManager, DialogueUI, CreateDialogueUI | Hecho (falta vincular deltas por opción) |
 | NPC que inicia diálogo | NpcController (trigger 2D, StartDialogue) | Hecho (falta config de deltas por opción) |
 | Interact | PlayerController (Interact, radio, NPC más cercano) | Hecho |
-| Efecto psicodélico cámara | PsychedelicCameraEffect | Hecho (falta que lea “nivel” global y permita bajar) |
+| Efecto psicodélico cámara | PsychedelicCameraEffect (lee nivel de GameController) | Hecho (falta que lea PsychedeliaLevel de GameController) |
 | Respuesta última | GameController.LastDialogueResponse | Hecho |
-| Nivel psicodelia (estado global) | — | Por implementar (o reutilizar intensity como nivel) |
-| Nivel felicidad (estado global) | — | Por implementar |
+| Nivel psicodelia (estado global) | GameController (PsychedeliaLevel) | Por implementar; efecto cámara lee de aquí |
+| Nivel felicidad (estado global) | GameController (HappinessLevel) | Por implementar; cara Doom lee de aquí |
 | Cara personaje (Doom) | — | Por implementar |
 | Objetos interactuables | — | Por implementar (mismo contrato que NPC: diálogo + opciones + deltas) |
 
@@ -96,6 +109,6 @@ flowchart LR
 ## 6. Especificaciones para agentes IA
 
 - **Ubicación de datos de diálogo:** NpcController en el inspector (y en el futuro, un componente equivalente en objetos). Extensión: por cada opción, dos valores numéricos (delta psicodelia, delta felicidad).
-- **Dónde persistir niveles:** Un único lugar (p. ej. GameController o un PlayerState singleton) con `PsychedeliaLevel` y `HappinessLevel`, leídos por PsychedelicCameraEffect y por el componente de la cara.
+- **Dónde persistir niveles:** **GameController** lleva el estado con `PsychedeliaLevel` y `HappinessLevel`. PsychedelicCameraEffect lee el nivel de psicodelia de GameController y aplica esa intensidad al efecto de cámara; el componente de la cara Doom lee el nivel de felicidad de GameController y aplica la expresión/frame correspondiente.
 - **Contrato de DialogueManager al confirmar opción:** Recibir el índice elegido y el `owner` (NpcController u objeto); el owner proporciona los deltas para ese índice; el juego aplica los deltas y actualiza UI/cámara.
 - **Input:** Se usa Input System con action maps `"Player"` y `"UI"`; durante el diálogo el movimiento está deshabilitado y la navegación de opciones usa `"UI/Navigate"`.
