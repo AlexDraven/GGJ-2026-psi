@@ -7,12 +7,18 @@ public class NpcController : MonoBehaviour
     [SerializeField, TextArea(2, 6)] string dialogueText = "";
     [Tooltip("Opciones al final del diálogo (dejar vacío = solo texto).")]
     [SerializeField] string[] dialogueChoices;
-    [Tooltip("Índice de la opción que activa el efecto psicodélico (0 = primera, 1 = segunda…). -1 = no activar.")]
-    [SerializeField] int choiceIndexThatTriggersEffect = -1;
+    [Tooltip("Delta de psicodelia por opción (índice 0 = primera opción). Ej: +0.2, -0.1, 0. Mismo tamaño que Dialogue Choices.")]
+    [SerializeField] float[] psychedeliaDeltas;
 
     bool playerInRange;
 
-    public int ChoiceIndexThatTriggersEffect => choiceIndexThatTriggersEffect;
+    /// <summary>Devuelve el delta de psicodelia para la opción elegida. 0 si no hay datos.</summary>
+    public float GetPsychedeliaDeltaForChoice(int choiceIndex)
+    {
+        if (psychedeliaDeltas == null || choiceIndex < 0 || choiceIndex >= psychedeliaDeltas.Length)
+            return 0f;
+        return psychedeliaDeltas[choiceIndex];
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

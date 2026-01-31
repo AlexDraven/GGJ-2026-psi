@@ -175,11 +175,8 @@ public class DialogueManager : MonoBehaviour
             var chosen = choices[choiceSelectedIndex];
             if (GameController.Instance != null)
                 GameController.Instance.LastDialogueResponse = chosen;
-            if (dialogueOwner != null && dialogueOwner.ChoiceIndexThatTriggersEffect == choiceSelectedIndex)
-            {
-                if (PsychedelicCameraEffect.Instance != null)
-                    PsychedelicCameraEffect.Instance.AddIntensity(0.2f);
-            }
+            float delta = dialogueOwner != null ? dialogueOwner.GetPsychedeliaDeltaForChoice(choiceSelectedIndex) : 0f;
+            GameController.Instance?.AddPsychedelia(delta);
             Close();
             return;
         }

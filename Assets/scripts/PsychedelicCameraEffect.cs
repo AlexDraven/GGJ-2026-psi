@@ -6,12 +6,8 @@ public class PsychedelicCameraEffect : MonoBehaviour
     public static PsychedelicCameraEffect Instance { get; private set; }
 
     [SerializeField] Shader effectShader;
-    [SerializeField] float intensityPerHit = 0.2f;
-    [SerializeField] float decaySpeed = 0.2f;
-    [SerializeField] bool useDecay = true;
 
     Material material;
-    float intensity;
 
     void Awake()
     {
@@ -36,26 +32,16 @@ public class PsychedelicCameraEffect : MonoBehaviour
             Destroy(material);
     }
 
-    void Update()
-    {
-        if (!useDecay || material == null)
-            return;
-        intensity -= decaySpeed * Time.deltaTime;
-        intensity = Mathf.Max(0f, intensity);
-    }
-
+    /// <summary>Redirige a GameController; la intensidad se lee de GameController.PsychedeliaLevel.</summary>
     public void AddIntensity(float amount)
     {
-        intensity = Mathf.Min(1f, intensity + amount);
-    }
-
-    public void AddIntensity()
-    {
-        AddIntensity(intensityPerHit);
+        if (GameController.Instance != null)
+            GameController.Instance.AddPsychedelia(amount);
     }
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
+        float intensity = (GameController.Instance != null) ? GameController.Instance.PsychedeliaLevel : 0f;
         if (material == null || intensity <= 0f)
         {
             Graphics.Blit(source, destination);

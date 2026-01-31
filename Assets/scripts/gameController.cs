@@ -33,6 +33,12 @@ public class GameController : MonoBehaviour
     public bool IsInDialogue => isInDialogue;
     public void SetInDialogue(bool value) { isInDialogue = value; }
 
+    [Header("Psychedelia")]
+    [Tooltip("Nivel de psicodelia del personaje (0-1). Fuente de verdad para el efecto de cámara.")]
+    [SerializeField, Range(0f, 1f)] float psychedeliaLevel;
+    public float PsychedeliaLevel => psychedeliaLevel;
+    public void AddPsychedelia(float delta) { psychedeliaLevel = Mathf.Clamp01(psychedeliaLevel + delta); }
+
     void Awake()
     {
         if (Instance != null)
