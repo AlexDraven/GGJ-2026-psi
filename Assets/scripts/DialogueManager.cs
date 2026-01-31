@@ -175,8 +175,10 @@ public class DialogueManager : MonoBehaviour
             var chosen = choices[choiceSelectedIndex];
             if (GameController.Instance != null)
                 GameController.Instance.LastDialogueResponse = chosen;
-            float delta = dialogueOwner != null ? dialogueOwner.GetPsychedeliaDeltaForChoice(choiceSelectedIndex) : 0f;
-            GameController.Instance?.AddPsychedelia(delta);
+            float psychedeliaDelta = dialogueOwner != null ? dialogueOwner.GetPsychedeliaDeltaForChoice(choiceSelectedIndex) : 0f;
+            float happinessDelta = dialogueOwner != null ? dialogueOwner.GetHappinessDeltaForChoice(choiceSelectedIndex) : 0f;
+            GameController.Instance?.AddPsychedelia(psychedeliaDelta);
+            GameController.Instance?.AddHappiness(happinessDelta);
             Close();
             return;
         }

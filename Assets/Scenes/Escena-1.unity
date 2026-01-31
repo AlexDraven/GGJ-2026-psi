@@ -1102,6 +1102,9 @@ MonoBehaviour:
   psychedeliaDeltas:
   - 1
   - -1
+  happinessDeltas:
+  - -1
+  - 1
 --- !u!1 &1393440953
 GameObject:
   m_ObjectHideFlags: 0

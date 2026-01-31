@@ -3,7 +3,7 @@ Shader "Hidden/PsychedelicEffect"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Intensity ("Intensity", Range(0, 1)) = 0
+        _Intensity ("Intensity", Range(0, 3)) = 0
     }
     SubShader
     {

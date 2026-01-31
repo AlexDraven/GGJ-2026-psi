@@ -6,6 +6,8 @@ public class PsychedelicCameraEffect : MonoBehaviour
     public static PsychedelicCameraEffect Instance { get; private set; }
 
     [SerializeField] Shader effectShader;
+    [Tooltip("Intensidad enviada al shader cuando PsychedeliaLevel = 1. Valores > 1 hacen el efecto mucho más fuerte al máximo.")]
+    [SerializeField] float intensityAtMaxLevel = 2f;
 
     Material material;
 
@@ -41,7 +43,8 @@ public class PsychedelicCameraEffect : MonoBehaviour
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        float intensity = (GameController.Instance != null) ? GameController.Instance.PsychedeliaLevel : 0f;
+        float level = (GameController.Instance != null) ? GameController.Instance.PsychedeliaLevel : 0f;
+        float intensity = level * intensityAtMaxLevel;
         if (material == null || intensity <= 0f)
         {
             Graphics.Blit(source, destination);

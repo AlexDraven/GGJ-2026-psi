@@ -39,6 +39,12 @@ public class GameController : MonoBehaviour
     public float PsychedeliaLevel => psychedeliaLevel;
     public void AddPsychedelia(float delta) { psychedeliaLevel = Mathf.Clamp01(psychedeliaLevel + delta); }
 
+    [Header("Felicidad")]
+    [Tooltip("Nivel de felicidad del personaje (0-1). Fuente de verdad para la cara Doom y el audio de felicidad.")]
+    [SerializeField, Range(0f, 1f)] float happinessLevel;
+    public float HappinessLevel => happinessLevel;
+    public void AddHappiness(float delta) { happinessLevel = Mathf.Clamp01(happinessLevel + delta); }
+
     void Awake()
     {
         if (Instance != null)

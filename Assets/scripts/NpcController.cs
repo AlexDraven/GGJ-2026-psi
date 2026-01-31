@@ -9,6 +9,8 @@ public class NpcController : MonoBehaviour
     [SerializeField] string[] dialogueChoices;
     [Tooltip("Delta de psicodelia por opción (índice 0 = primera opción). Ej: +0.2, -0.1, 0. Mismo tamaño que Dialogue Choices.")]
     [SerializeField] float[] psychedeliaDeltas;
+    [Tooltip("Delta de felicidad por opción (índice 0 = primera opción). Ej: +0.1, -0.05, 0. Mismo tamaño que Dialogue Choices.")]
+    [SerializeField] float[] happinessDeltas;
 
     bool playerInRange;
 
@@ -18,6 +20,14 @@ public class NpcController : MonoBehaviour
         if (psychedeliaDeltas == null || choiceIndex < 0 || choiceIndex >= psychedeliaDeltas.Length)
             return 0f;
         return psychedeliaDeltas[choiceIndex];
+    }
+
+    /// <summary>Devuelve el delta de felicidad para la opción elegida. 0 si no hay datos.</summary>
+    public float GetHappinessDeltaForChoice(int choiceIndex)
+    {
+        if (happinessDeltas == null || choiceIndex < 0 || choiceIndex >= happinessDeltas.Length)
+            return 0f;
+        return happinessDeltas[choiceIndex];
     }
 
     void OnTriggerEnter2D(Collider2D other)
