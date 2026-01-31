@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectShader: {fileID: 4800000, guid: 8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a, type: 3}
+  intensityAtMaxLevel: 2
 --- !u!1 &655132621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1106,9 @@ MonoBehaviour:
   happinessDeltas:
   - -1
   - 1
+  responseAfterChoice:
+  - gracia locuraaaaaaaa!!!!
+  - andakagajoputa
 --- !u!1 &1393440953
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,8 +11,21 @@ public class NpcController : MonoBehaviour
     [SerializeField] float[] psychedeliaDeltas;
     [Tooltip("Delta de felicidad por opción (índice 0 = primera opción). Ej: +0.1, -0.05, 0. Mismo tamaño que Dialogue Choices.")]
     [SerializeField] float[] happinessDeltas;
+    [Tooltip("Texto de respuesta del NPC/objeto por opción (índice 0 = primera opción). Varias líneas = separar con Enter. Vacío = no hay respuesta, se cierra el diálogo.")]
+    [SerializeField] string[] responseAfterChoice;
 
     bool playerInRange;
+
+    /// <summary>Devuelve las líneas de respuesta para la opción elegida, o null si no hay.</summary>
+    public string[] GetResponseLinesAfterChoice(int choiceIndex)
+    {
+        if (responseAfterChoice == null || choiceIndex < 0 || choiceIndex >= responseAfterChoice.Length)
+            return null;
+        string s = responseAfterChoice[choiceIndex];
+        if (string.IsNullOrWhiteSpace(s))
+            return null;
+        return s.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+    }
 
     /// <summary>Devuelve el delta de psicodelia para la opción elegida. 0 si no hay datos.</summary>
     public float GetPsychedeliaDeltaForChoice(int choiceIndex)
