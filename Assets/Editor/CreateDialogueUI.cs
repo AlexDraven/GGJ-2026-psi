@@ -80,20 +80,21 @@ public static class CreateDialogueUI
         speakerRect.sizeDelta = new Vector2(-padding * 2, 24);
         var speakerTmp = speakerGo.AddComponent<TextMeshProUGUI>();
         speakerTmp.font = font;
-        speakerTmp.fontSize = 18;
+        speakerTmp.fontSize = 24;
         speakerTmp.color = new Color(0.9f, 0.85f, 0.6f);
         speakerTmp.text = "";
 
         var textGo = new GameObject("DialogueText");
         textGo.transform.SetParent(panelGo.transform, false);
         var textRect = textGo.AddComponent<RectTransform>();
-        textRect.anchorMin = new Vector2(0, 0.5f);
+        // Anchor from 0.2 so dialogue area has enough height for larger font (speaker 36px + padding above)
+        textRect.anchorMin = new Vector2(0, 0.2f);
         textRect.anchorMax = new Vector2(1, 1);
         textRect.offsetMin = new Vector2(padding, padding);
         textRect.offsetMax = new Vector2(-padding, -130);
         var dialogueTmp = textGo.AddComponent<TextMeshProUGUI>();
         dialogueTmp.font = font;
-        dialogueTmp.fontSize = 22;
+        dialogueTmp.fontSize = 32;
         dialogueTmp.color = Color.white;
         dialogueTmp.text = "";
         dialogueTmp.textWrappingMode = TMPro.TextWrappingModes.Normal;
@@ -120,13 +121,13 @@ public static class CreateDialogueUI
         cursorRect.anchorMin = new Vector2(0, 0.5f);
         cursorRect.anchorMax = new Vector2(0, 0.5f);
         cursorRect.pivot = new Vector2(0, 0.5f);
-        cursorRect.sizeDelta = new Vector2(20, 24);
+        cursorRect.sizeDelta = new Vector2(20, 32);
         cursorRect.anchoredPosition = new Vector2(-12, 30);
         var cursorLE = cursorGo.AddComponent<LayoutElement>();
         cursorLE.ignoreLayout = true;
         var cursorTmp = cursorGo.AddComponent<TextMeshProUGUI>();
         cursorTmp.font = font;
-        cursorTmp.fontSize = 22;
+        cursorTmp.fontSize = 32;
         cursorTmp.color = Color.yellow;
         cursorTmp.text = ">";
         cursorGo.SetActive(false);
