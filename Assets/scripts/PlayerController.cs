@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
@@ -11,7 +11,7 @@ public class player : MonoBehaviour
     [SerializeField] InputActionAsset inputActions;
 
     [Header("Game")]
-    [SerializeField] gameController gameController;
+    [SerializeField] GameController gameController;
 
     Rigidbody2D rb;
     InputActionMap playerMap;
@@ -22,6 +22,9 @@ public class player : MonoBehaviour
 
     void Awake()
     {
+        if (gameController == null)
+            gameController = GameController.Instance;
+
         rb = GetComponent<Rigidbody2D>();
         if (rb == null)
             rb = gameObject.AddComponent<Rigidbody2D>();
@@ -90,7 +93,7 @@ public class player : MonoBehaviour
     {
         if (gameController == null)
             return true;
-        return gameController.CurrentState == gameController.GameState.Playing;
+        return gameController.CurrentState == GameController.GameState.Playing;
     }
 
     void OnInteract()

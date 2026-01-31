@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class gameController : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     public enum GameState
     {
@@ -10,6 +10,9 @@ public class gameController : MonoBehaviour
         Paused,
         GameOver
     }
+
+    [Header("Scenes")]
+    [SerializeField] string gameSceneName = "Escena-1";
 
     [Header("Pause")]
     [SerializeField] InputActionAsset inputActions;
@@ -19,8 +22,18 @@ public class gameController : MonoBehaviour
     GameState currentState = GameState.Playing;
     public GameState CurrentState => currentState;
 
+    public static GameController Instance { get; private set; }
+
     void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         if (inputActions != null)
             pauseAction = inputActions.FindActionMap("Player").FindAction("Pause");
     }
@@ -78,6 +91,17 @@ public class gameController : MonoBehaviour
     {
         currentState = GameState.GameOver;
         // timeScale queda en 1 para que la escena siga animándose; cambiar a 0f si prefieres congelar
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadGameScene()
+    {
+        Debug.Log($"[GameController] Cargando escena de juego: {gameSceneName}");
+        LoadScene(gameSceneName);
     }
 
     public void Restart()
