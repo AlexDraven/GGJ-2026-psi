@@ -10,6 +10,8 @@ public class NpcController : MonoBehaviour
             return;
         playerInRange = true;
         Debug.Log("[NpcController] Trigger activado: jugador cerca del NPC");
+        if (PsychedelicCameraEffect.Instance != null)
+            PsychedelicCameraEffect.Instance.AddIntensity(0.2f);
     }
 
     void OnTriggerExit2D(Collider2D other)
