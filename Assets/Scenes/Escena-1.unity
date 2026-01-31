@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectShader: {fileID: 4800000, guid: 8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a, type: 3}
   intensityAtMaxLevel: 2
+  happinessColorShader: {fileID: 0}
 --- !u!1 &655132621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,10 +1097,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speakerName: Enepece
-  dialogueText: hola soy un npc... no tendras una monedita por ahi?...
+  dialogueText: hola soy un npc... quere proba estas pastis?...
   dialogueChoices:
-  - si tengo loco, toma
-  - me agarraste sin cambio...
+  - dale loco
+  - no las necesito
   psychedeliaDeltas:
   - 1
   - -1
@@ -1107,8 +1108,8 @@ MonoBehaviour:
   - -1
   - 1
   responseAfterChoice:
-  - gracia locuraaaaaaaa!!!!
-  - andakagajoputa
+  - disfrutaaaaaaaaa!!!!
+  - 'te las daba gratis... '
 --- !u!1 &1393440953
 GameObject:
   m_ObjectHideFlags: 0
