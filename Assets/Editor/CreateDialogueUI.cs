@@ -90,7 +90,7 @@ public static class CreateDialogueUI
         textRect.anchorMin = new Vector2(0, 0.5f);
         textRect.anchorMax = new Vector2(1, 1);
         textRect.offsetMin = new Vector2(padding, padding);
-        textRect.offsetMax = new Vector2(-padding, -40);
+        textRect.offsetMax = new Vector2(-padding, -130);
         var dialogueTmp = textGo.AddComponent<TextMeshProUGUI>();
         dialogueTmp.font = font;
         dialogueTmp.fontSize = 22;
@@ -105,7 +105,7 @@ public static class CreateDialogueUI
         optionsRect.anchorMax = new Vector2(1, 0);
         optionsRect.pivot = new Vector2(0, 0);
         optionsRect.anchoredPosition = new Vector2(padding, padding);
-        optionsRect.sizeDelta = new Vector2(-padding * 2, 80);
+        optionsRect.sizeDelta = new Vector2(-padding * 2, 130);
         var layout = optionsGo.AddComponent<VerticalLayoutGroup>();
         layout.childAlignment = TextAnchor.UpperLeft;
         layout.spacing = 4;
