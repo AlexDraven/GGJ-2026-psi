@@ -121,7 +121,7 @@ public static class CreateDialogueUI
         cursorRect.anchorMax = new Vector2(0, 0.5f);
         cursorRect.pivot = new Vector2(0, 0.5f);
         cursorRect.sizeDelta = new Vector2(20, 24);
-        cursorRect.anchoredPosition = new Vector2(-12, 0);
+        cursorRect.anchoredPosition = new Vector2(-12, 30);
         var cursorLE = cursorGo.AddComponent<LayoutElement>();
         cursorLE.ignoreLayout = true;
         var cursorTmp = cursorGo.AddComponent<TextMeshProUGUI>();

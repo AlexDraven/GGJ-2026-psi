@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     int choiceSelectedIndex;
     bool typewriterRunning;
     Coroutine typewriterCoroutine;
+   NpcController dialogueOwner;
 
     InputAction navigateAction;
     float lastNavigateY;
@@ -73,7 +74,8 @@ public class DialogueManager : MonoBehaviour
     /// <param name="speaker">Nombre del hablante (opcional).</param>
     /// <param name="dialogueLines">Líneas de texto en orden.</param>
     /// <param name="dialogueChoices">Opciones al final (null = sin opciones).</param>
-    public void StartDialogue(string speaker, string[] dialogueLines, string[] dialogueChoices = null)
+    /// <param name="owner">NPC que inicia el diálogo (opcional); se usa para activar efecto psicodélico según opción configurada.</param>
+    public void StartDialogue(string speaker, string[] dialogueLines, string[] dialogueChoices = null, NpcController owner = null)
     {
         if (dialogueLines == null || dialogueLines.Length == 0)
             return;
@@ -94,6 +96,7 @@ public class DialogueManager : MonoBehaviour
         speakerName = speaker ?? "";
         lines = dialogueLines;
         choices = dialogueChoices != null && dialogueChoices.Length > 0 ? dialogueChoices : null;
+        dialogueOwner = owner;
         lineIndex = 0;
         choiceSelectedIndex = 0;
         typewriterRunning = false;
@@ -172,6 +175,11 @@ public class DialogueManager : MonoBehaviour
             var chosen = choices[choiceSelectedIndex];
             if (GameController.Instance != null)
                 GameController.Instance.LastDialogueResponse = chosen;
+            if (dialogueOwner != null && dialogueOwner.ChoiceIndexThatTriggersEffect == choiceSelectedIndex)
+            {
+                if (PsychedelicCameraEffect.Instance != null)
+                    PsychedelicCameraEffect.Instance.AddIntensity(0.2f);
+            }
             Close();
             return;
         }

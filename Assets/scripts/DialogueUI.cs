@@ -19,6 +19,8 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] Transform optionsContainer;
     [SerializeField] RectTransform cursorRect;
     [SerializeField] float cursorOffsetX = -12f;
+    [Tooltip("Desplazamiento vertical del cursor respecto a cada opción.")]
+    [SerializeField] float cursorOffsetY = 0f;
 
     RectTransform[] optionRects;
 
@@ -123,12 +125,17 @@ public class DialogueUI : MonoBehaviour
         if (containerRect != null)
             LayoutRebuilder.ForceRebuildLayoutImmediate(containerRect);
 
+        // index = choiceSelectedIndex del DialogueManager: 0 = primera opción (arriba), 1 = segunda, etc.
         var optionRect = optionRects[index];
         cursorRect.SetParent(optionsContainer, true);
-        cursorRect.anchorMin = new Vector2(0, 0.5f);
-        cursorRect.anchorMax = new Vector2(0, 0.5f);
-        cursorRect.pivot = new Vector2(0, 0.5f);
-        cursorRect.anchoredPosition = new Vector2(cursorOffsetX, optionRect.anchoredPosition.y);
+        // Misma ancla que las opciones (arriba) para usar el mismo sistema de referencia
+        cursorRect.anchorMin = new Vector2(0, 1f);
+        cursorRect.anchorMax = new Vector2(0, 1f);
+        cursorRect.pivot = new Vector2(0, 1f);
+        // Centro de la fila (desde arriba): top - altura/2. Con pivot en top, para centrar el cursor: top del cursor = centro fila + altura cursor/2.
+        float rowCenterY = optionRect.anchoredPosition.y - optionRect.rect.height * 0.5f;
+        float cursorTopY = rowCenterY + cursorRect.rect.height * 0.5f;
+        cursorRect.anchoredPosition = new Vector2(cursorOffsetX, cursorTopY + cursorOffsetY);
         cursorRect.SetAsLastSibling();
     }
 

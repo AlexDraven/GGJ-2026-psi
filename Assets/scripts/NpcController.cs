@@ -7,17 +7,18 @@ public class NpcController : MonoBehaviour
     [SerializeField, TextArea(2, 6)] string dialogueText = "";
     [Tooltip("Opciones al final del diálogo (dejar vacío = solo texto).")]
     [SerializeField] string[] dialogueChoices;
+    [Tooltip("Índice de la opción que activa el efecto psicodélico (0 = primera, 1 = segunda…). -1 = no activar.")]
+    [SerializeField] int choiceIndexThatTriggersEffect = -1;
 
     bool playerInRange;
+
+    public int ChoiceIndexThatTriggersEffect => choiceIndexThatTriggersEffect;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsPlayer(other))
             return;
         playerInRange = true;
-        Debug.Log("[NpcController] Trigger activado: jugador cerca del NPC");
-        if (PsychedelicCameraEffect.Instance != null)
-            PsychedelicCameraEffect.Instance.AddIntensity(0.2f);
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -51,6 +52,6 @@ public class NpcController : MonoBehaviour
         }
         if (dialogueChoices == null || dialogueChoices.Length == 0)
             Debug.LogWarning("[NpcController] Dialogue Choices está vacío. Para mostrar opciones de respuesta, asigna Size ≥ 1 y rellena los elementos en el inspector.");
-        DialogueManager.Instance.StartDialogue(speakerName, lines, dialogueChoices);
+        DialogueManager.Instance.StartDialogue(speakerName, lines, dialogueChoices, this);
     }
 }

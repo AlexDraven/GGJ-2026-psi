@@ -57,6 +57,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Con diálogo activo, desactivar Move y Sprint para que las flechas no muevan al personaje
+        if (gameController != null && gameController.IsInDialogue)
+        {
+            moveAction?.Disable();
+            sprintAction?.Disable();
+        }
+        else
+        {
+            moveAction?.Enable();
+            sprintAction?.Enable();
+        }
+
         if (interactAction != null && interactAction.triggered)
             OnInteract();
         if (!CanAct())
@@ -65,7 +77,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!CanAct() || moveAction == null || rb == null)
+        if (!CanAct())
+        {
+            if (rb != null)
+                rb.linearVelocity = Vector2.zero;
+            return;
+        }
+        if (moveAction == null || rb == null)
             return;
 
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
