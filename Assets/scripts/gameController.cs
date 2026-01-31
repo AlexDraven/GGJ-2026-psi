@@ -24,6 +24,11 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance { get; private set; }
 
+    [Header("Dialogue")]
+    [Tooltip("Última respuesta del diálogo; lo usará el sistema de diálogo cuando se implemente.")]
+    [SerializeField] string lastDialogueResponse = "";
+    public string LastDialogueResponse { get => lastDialogueResponse; set => lastDialogueResponse = value; }
+
     void Awake()
     {
         if (Instance != null)

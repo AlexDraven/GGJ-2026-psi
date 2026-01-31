@@ -1,0 +1,2550 @@
+fileFormatVersion: 2
+guid: 7628901e855094850a50f4baeccbd624
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4567570093520109217
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_0
+  - first:
+      213: 8449906310278629415
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_1
+  - first:
+      213: 8125545960578835251
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_2
+  - first:
+      213: 7824366710624135747
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_3
+  - first:
+      213: 8267005271949572441
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_4
+  - first:
+      213: -8415483119863645563
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_5
+  - first:
+      213: -1854257512261076774
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_6
+  - first:
+      213: -3316903404846457054
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_7
+  - first:
+      213: 4095297660603782496
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_8
+  - first:
+      213: -8414624973625514586
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_9
+  - first:
+      213: 6937156361200733365
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_10
+  - first:
+      213: -8581893664781961820
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_11
+  - first:
+      213: 4392437203884513879
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_12
+  - first:
+      213: -5080070875009979307
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_13
+  - first:
+      213: 5428086367956391164
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_14
+  - first:
+      213: 9197203250863677876
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_15
+  - first:
+      213: 6563696913957349832
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_16
+  - first:
+      213: 581640062726589803
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_17
+  - first:
+      213: -2676063920334072611
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_18
+  - first:
+      213: 751495377809781265
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_19
+  - first:
+      213: -5054204326600395921
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_20
+  - first:
+      213: -1185940540836646681
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_21
+  - first:
+      213: -6974195530319313939
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_22
+  - first:
+      213: -5365508819226657926
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_23
+  - first:
+      213: -2655011885615138419
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_24
+  - first:
+      213: 7035522782888427759
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_25
+  - first:
+      213: -5394654132275767352
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_26
+  - first:
+      213: 2394397055443605262
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_27
+  - first:
+      213: -8872981473148533380
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_28
+  - first:
+      213: 1189038607718056694
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_29
+  - first:
+      213: 7464066800443082724
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_30
+  - first:
+      213: 9113387018453163480
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_31
+  - first:
+      213: -3242250368544008691
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_32
+  - first:
+      213: 7555903232390682595
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_33
+  - first:
+      213: -6993275347067529418
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_34
+  - first:
+      213: -351292210957613805
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_35
+  - first:
+      213: -6954927086043772713
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_36
+  - first:
+      213: -8969564097961379461
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_37
+  - first:
+      213: -8731377179190172749
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_38
+  - first:
+      213: -2234588808764679297
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_39
+  - first:
+      213: 5476032995620328904
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_40
+  - first:
+      213: -8211147006845965540
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_41
+  - first:
+      213: -4349096046047688263
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_42
+  - first:
+      213: -6850788876559856364
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_43
+  - first:
+      213: -4478380462617605878
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_44
+  - first:
+      213: 3950563533898457983
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_45
+  - first:
+      213: 8367106996737790857
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_46
+  - first:
+      213: 5449237703825058841
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_47
+  - first:
+      213: 1520236265929661107
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_48
+  - first:
+      213: -4060828322940660370
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_49
+  - first:
+      213: -2170763391607813355
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_50
+  - first:
+      213: -8846711777328949866
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_51
+  - first:
+      213: -5238852607973019781
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_52
+  - first:
+      213: -4300728532990594497
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_53
+  - first:
+      213: -3241129279006619878
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_54
+  - first:
+      213: 4739728107928172296
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_55
+  - first:
+      213: 5823609787125963175
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_56
+  - first:
+      213: 8074195385157701404
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_57
+  - first:
+      213: 2483752400163654914
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_58
+  - first:
+      213: 5328860145563410895
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_59
+  - first:
+      213: 8210366104820531262
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_60
+  - first:
+      213: -370585532941045510
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_61
+  - first:
+      213: -3140767638444039467
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_62
+  - first:
+      213: 6428501672680010883
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_63
+  - first:
+      213: -4007958062300850534
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_64
+  - first:
+      213: -2827031572874537000
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_65
+  - first:
+      213: -1087088437822319902
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_66
+  - first:
+      213: -8030399059102343676
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_67
+  - first:
+      213: -7080985453126770932
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_68
+  - first:
+      213: -5803071432608747606
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_69
+  - first:
+      213: 4893846946843334528
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_70
+  - first:
+      213: 7529256867929363340
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_71
+  - first:
+      213: -6094341381092092258
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_72
+  - first:
+      213: -7701440969705194659
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_73
+  - first:
+      213: 2093882178833164706
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_74
+  - first:
+      213: -4912770278253710652
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_75
+  - first:
+      213: 8070909754317377932
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_76
+  - first:
+      213: 69897821830590822
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_77
+  - first:
+      213: -3445822521779792811
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_78
+  - first:
+      213: -6632483822769609033
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_79
+  - first:
+      213: -6655765697050573362
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_80
+  - first:
+      213: -6362985017303677514
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_81
+  - first:
+      213: -673641064586807857
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_82
+  - first:
+      213: 2173869317579835192
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_83
+  - first:
+      213: -4416426583713635098
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_84
+  - first:
+      213: -7828883328342410121
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_85
+  - first:
+      213: -11523730863391098
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_86
+  - first:
+      213: -5045594804219752732
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_87
+  - first:
+      213: 1768877616801390555
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_88
+  - first:
+      213: -1596460225042461539
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_89
+  - first:
+      213: 3445728405032717966
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_90
+  - first:
+      213: -6923268581687656821
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_91
+  - first:
+      213: -5434126576813967813
+    second: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_92
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 302
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aeb6feccc4436f30800000000000000
+      internalID: 4567570093520109217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 302
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7284d790509144570800000000000000
+      internalID: 8449906310278629415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 302
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333696a000db3c070800000000000000
+      internalID: 8125545960578835251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 302
+        width: 20
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34aa42b611cb59c60800000000000000
+      internalID: 7824366710624135747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 302
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959f5de8e7d4ab270800000000000000
+      internalID: 8267005271949572441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 302
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a3b3b80b2363b80800000000000000
+      internalID: -8415483119863645563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_6
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 302
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8349bed9a5446e0800000000000000
+      internalID: -1854257512261076774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 235
+        width: 29
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22fd7df4dedf7f1d0800000000000000
+      internalID: -3316903404846457054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 235
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065d6c5468b65d830800000000000000
+      internalID: 4095297660603782496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 235
+        width: 21
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5abe84b2f393b80800000000000000
+      internalID: -8414624973625514586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 235
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc06b4b4fab54060800000000000000
+      internalID: 6937156361200733365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 235
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5fe724e2df6e880800000000000000
+      internalID: -8581893664781961820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 235
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a1fb36d5215fc30800000000000000
+      internalID: 4392437203884513879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_13
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 235
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ce83d5476ff79b0800000000000000
+      internalID: -5080070875009979307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 173
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf45e2cdacf645b40800000000000000
+      internalID: 5428086367956391164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 173
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b12cc6b0a703af70800000000000000
+      internalID: 9197203250863677876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_16
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 173
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c961c9319fe61b50800000000000000
+      internalID: 6563696913957349832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_17
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 173
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d44fd2e86621800800000000000000
+      internalID: 581640062726589803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_18
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 173
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd49f38fa06bcdad0800000000000000
+      internalID: -2676063920334072611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 118
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11233b48019dd6a00800000000000000
+      internalID: 751495377809781265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 118
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63bdba71fbdbd9b0800000000000000
+      internalID: -5054204326600395921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 118
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e072ba8c51ba8fe0800000000000000
+      internalID: -1185940540836646681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_22
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 118
+        width: 63
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de34335bd1ea63f90800000000000000
+      internalID: -6974195530319313939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_23
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 54
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bf4c61822e985b0800000000000000
+      internalID: -5365508819226657926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 54
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d893873c1c0872bd0800000000000000
+      internalID: -2655011885615138419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 54
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe08b3bf1b233a160800000000000000
+      internalID: 7035522782888427759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_26
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 54
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c71c9716a65225b0800000000000000
+      internalID: -5394654132275767352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_27
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 42
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0715f49f6b9a3120800000000000000
+      internalID: 2394397055443605262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_28
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 42
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c750c5a7c56dcd480800000000000000
+      internalID: -8872981473148533380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_29
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 40
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2824d5050508010800000000000000
+      internalID: 1189038607718056694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_30
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7423c6531b59760800000000000000
+      internalID: 7464066800443082724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_31
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 42
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd9e8f5531497e70800000000000000
+      internalID: 9113387018453163480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_32
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 42
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d061e0ec7763103d0800000000000000
+      internalID: -3242250368544008691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_33
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 42
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e75fdbf4f5fbd860800000000000000
+      internalID: 7555903232390682595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_34
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 40
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6371b81bf15e2fe90800000000000000
+      internalID: -6993275347067529418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_35
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31582896895ff1bf0800000000000000
+      internalID: -351292210957613805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_36
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 42
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d84e9df9a22b7f90800000000000000
+      internalID: -6954927086043772713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_37
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 42
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b793ae6c9f4b58380800000000000000
+      internalID: -8969564097961379461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_38
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 42
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3ea6267bae3d680800000000000000
+      internalID: -8731377179190172749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_39
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 42
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b948a51552df0e0800000000000000
+      internalID: -2234588808764679297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_40
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 42
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5944a0ff6cefb40800000000000000
+      internalID: 5476032995620328904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_41
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 40
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b2f624d452c0e80800000000000000
+      internalID: -8211147006845965540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 42
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b985494038e4a3c0800000000000000
+      internalID: -4349096046047688263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_43
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 42
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41dc37550db1de0a0800000000000000
+      internalID: -6850788876559856364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_44
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 30
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09c0ac52b899d1c0800000000000000
+      internalID: -4478380462617605878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_45
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 42
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7321a46a9833d630800000000000000
+      internalID: 3950563533898457983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_46
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 30
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983dd329b7fed1470800000000000000
+      internalID: 8367106996737790857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_47
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 28
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c682102d49f9b40800000000000000
+      internalID: 5449237703825058841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_48
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 28
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba576d44d6f81510800000000000000
+      internalID: 1520236265929661107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 30
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65d64dc72a05a7c0800000000000000
+      internalID: -4060828322940660370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_50
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b4bcf4236efd1e0800000000000000
+      internalID: -2170763391607813355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_51
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6951b0aa28a2a3580800000000000000
+      internalID: -8846711777328949866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_52
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 28
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fa3274f4bdb47b0800000000000000
+      internalID: -5238852607973019781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 29
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3275bb7f2eb054c0800000000000000
+      internalID: -4300728532990594497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_54
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1741bdc7123503d0800000000000000
+      internalID: -3241129279006619878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_55
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 30
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8073efc1a95e6c140800000000000000
+      internalID: 4739728107928172296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_56
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 28
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a991202f3e91d050800000000000000
+      internalID: 5823609787125963175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_57
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 30
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f4c638ced4d0070800000000000000
+      internalID: 8074195385157701404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_58
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 30
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d47c106af087220800000000000000
+      internalID: 2483752400163654914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_59
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc12b02a11ae3f940800000000000000
+      internalID: 5328860145563410895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_60
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 30
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e304cb1d87411f170800000000000000
+      internalID: 8210366104820531262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_61
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af07626db6a6bdaf0800000000000000
+      internalID: -370585532941045510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_62
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 18
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2208c2970c964d0800000000000000
+      internalID: -3140767638444039467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_63
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384b81e2630a63950800000000000000
+      internalID: 6428501672680010883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_64
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9615ed906fd068c0800000000000000
+      internalID: -4007958062300850534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_65
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 16
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7dff143cd54c8d0800000000000000
+      internalID: -2827031572874537000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_66
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 18
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e29a2053d2e9e0f0800000000000000
+      internalID: -1087088437822319902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_67
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 18
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ed2954a9a4e8090800000000000000
+      internalID: -8030399059102343676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_68
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 18
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f9bae3f394bbd90800000000000000
+      internalID: -7080985453126770932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_69
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 18
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf632d2749577fa0800000000000000
+      internalID: -5803071432608747606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_70
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0871ab39edf6ae340800000000000000
+      internalID: 4893846946843334528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_71
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83999bca3b4d7860800000000000000
+      internalID: 7529256867929363340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_72
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 18
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96da089dcc8c6ba0800000000000000
+      internalID: -6094341381092092258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_73
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 18
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bf416fd3cfe1590800000000000000
+      internalID: -7701440969705194659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_74
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 18
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a92fde6fb6fe0d10800000000000000
+      internalID: 2093882178833164706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_75
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2379df57552dbb0800000000000000
+      internalID: -4912770278253710652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_76
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 18
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c819258f8a1a10070800000000000000
+      internalID: 8070909754317377932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_77
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 18
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66139c8d2b358f000800000000000000
+      internalID: 69897821830590822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_78
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 6
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55456465caafd20d0800000000000000
+      internalID: -3445822521779792811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_79
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6ea458a1fa4f3a0800000000000000
+      internalID: -6632483822769609033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_80
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 6
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5021fbc58f1a3a0800000000000000
+      internalID: -6655765697050573362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_81
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 6
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b54b7cd6d222b7a0800000000000000
+      internalID: -6362985017303677514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_82
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5ff27550fb6a6f0800000000000000
+      internalID: -673641064586807857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_83
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837877e60a22b2e10800000000000000
+      internalID: 2173869317579835192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_84
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 6
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4282ddb63b5b2c0800000000000000
+      internalID: -4416426583713635098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_85
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c3c2297183a5390800000000000000
+      internalID: -7828883328342410121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_86
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e76635a3f07dff0800000000000000
+      internalID: -11523730863391098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_87
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eecced12427af9b0800000000000000
+      internalID: -5045594804219752732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_88
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf169012d05c8810800000000000000
+      internalID: 1768877616801390555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_89
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ccd4c32eb38d9e0800000000000000
+      internalID: -1596460225042461539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_90
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ec2766abfa1df20800000000000000
+      internalID: 3445728405032717966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_91
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 6
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e72efe7eb9bef90800000000000000
+      internalID: -6923268581687656821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Tough Turf - Enemies and Bosses - Regular Thug_92
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b367e7c6baa1694b0800000000000000
+      internalID: -5434126576813967813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: eaabd247c8a214813b987baa38ce8d64
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_0: 4567570093520109217
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_1: 8449906310278629415
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_10: 6937156361200733365
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_11: -8581893664781961820
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_12: 4392437203884513879
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_13: -5080070875009979307
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_14: 5428086367956391164
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_15: 9197203250863677876
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_16: 6563696913957349832
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_17: 581640062726589803
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_18: -2676063920334072611
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_19: 751495377809781265
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_2: 8125545960578835251
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_20: -5054204326600395921
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_21: -1185940540836646681
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_22: -6974195530319313939
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_23: -5365508819226657926
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_24: -2655011885615138419
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_25: 7035522782888427759
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_26: -5394654132275767352
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_27: 2394397055443605262
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_28: -8872981473148533380
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_29: 1189038607718056694
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_3: 7824366710624135747
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_30: 7464066800443082724
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_31: 9113387018453163480
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_32: -3242250368544008691
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_33: 7555903232390682595
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_34: -6993275347067529418
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_35: -351292210957613805
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_36: -6954927086043772713
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_37: -8969564097961379461
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_38: -8731377179190172749
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_39: -2234588808764679297
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_4: 8267005271949572441
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_40: 5476032995620328904
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_41: -8211147006845965540
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_42: -4349096046047688263
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_43: -6850788876559856364
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_44: -4478380462617605878
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_45: 3950563533898457983
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_46: 8367106996737790857
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_47: 5449237703825058841
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_48: 1520236265929661107
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_49: -4060828322940660370
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_5: -8415483119863645563
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_50: -2170763391607813355
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_51: -8846711777328949866
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_52: -5238852607973019781
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_53: -4300728532990594497
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_54: -3241129279006619878
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_55: 4739728107928172296
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_56: 5823609787125963175
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_57: 8074195385157701404
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_58: 2483752400163654914
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_59: 5328860145563410895
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_6: -1854257512261076774
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_60: 8210366104820531262
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_61: -370585532941045510
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_62: -3140767638444039467
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_63: 6428501672680010883
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_64: -4007958062300850534
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_65: -2827031572874537000
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_66: -1087088437822319902
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_67: -8030399059102343676
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_68: -7080985453126770932
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_69: -5803071432608747606
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_7: -3316903404846457054
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_70: 4893846946843334528
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_71: 7529256867929363340
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_72: -6094341381092092258
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_73: -7701440969705194659
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_74: 2093882178833164706
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_75: -4912770278253710652
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_76: 8070909754317377932
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_77: 69897821830590822
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_78: -3445822521779792811
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_79: -6632483822769609033
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_8: 4095297660603782496
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_80: -6655765697050573362
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_81: -6362985017303677514
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_82: -673641064586807857
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_83: 2173869317579835192
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_84: -4416426583713635098
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_85: -7828883328342410121
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_86: -11523730863391098
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_87: -5045594804219752732
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_88: 1768877616801390555
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_89: -1596460225042461539
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_9: -8414624973625514586
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_90: 3445728405032717966
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_91: -6923268581687656821
+      Arcade - Tough Turf - Enemies and Bosses - Regular Thug_92: -5434126576813967813
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
