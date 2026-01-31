@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Game")]
     [SerializeField] GameController gameController;
+    [SerializeField] float interactRadius = 1.5f;
 
     Rigidbody2D rb;
     InputActionMap playerMap;
@@ -56,10 +57,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!CanAct())
-            return;
         if (interactAction != null && interactAction.triggered)
             OnInteract();
+        if (!CanAct())
+            return;
     }
 
     void FixedUpdate()
@@ -93,11 +94,33 @@ public class PlayerController : MonoBehaviour
     {
         if (gameController == null)
             return true;
-        return gameController.CurrentState == GameController.GameState.Playing;
+        return gameController.CurrentState == GameController.GameState.Playing && !gameController.IsInDialogue;
     }
 
     void OnInteract()
     {
-        Debug.Log("Interact (hablar/examinar)");
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsInDialogue)
+        {
+            DialogueManager.Instance.Advance();
+            return;
+        }
+
+        var hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
+        NpcController nearest = null;
+        float nearestSq = float.MaxValue;
+        foreach (var col in hits)
+        {
+            var npc = col.GetComponent<NpcController>();
+            if (npc == null)
+                continue;
+            float sq = (npc.transform.position - transform.position).sqrMagnitude;
+            if (sq < nearestSq)
+            {
+                nearestSq = sq;
+                nearest = npc;
+            }
+        }
+        if (nearest != null)
+            nearest.StartDialogue();
     }
 }

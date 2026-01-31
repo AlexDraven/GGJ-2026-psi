@@ -29,6 +29,10 @@ public class GameController : MonoBehaviour
     [SerializeField] string lastDialogueResponse = "";
     public string LastDialogueResponse { get => lastDialogueResponse; set => lastDialogueResponse = value; }
 
+    bool isInDialogue;
+    public bool IsInDialogue => isInDialogue;
+    public void SetInDialogue(bool value) { isInDialogue = value; }
+
     void Awake()
     {
         if (Instance != null)

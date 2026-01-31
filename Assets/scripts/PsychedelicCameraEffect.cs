@@ -49,6 +49,11 @@ public class PsychedelicCameraEffect : MonoBehaviour
         intensity = Mathf.Min(1f, intensity + amount);
     }
 
+    public void AddIntensity()
+    {
+        AddIntensity(intensityPerHit);
+    }
+
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         if (material == null || intensity <= 0f)
