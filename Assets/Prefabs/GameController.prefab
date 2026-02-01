@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3550235693449391901}
   - component: {fileID: 6258399242702045900}
+  - component: {fileID: 6258399242702045901}
+  - component: {fileID: 6258399242702045902}
+  - component: {fileID: 6258399242702045903}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -46,3 +49,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   inputActions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   pauseMenuObject: {fileID: 0}
+--- !u!82 &6258399242702045901
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390282372948246467}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 68b41deddcbcd45f68871aafed87291b, type: 3}
+  m_volume: 0
+  m_pitch: 1
+  m_loop: 1
+  m_mute: 0
+  m_spatialBlend: 0
+  m_rolloffMode: 0
+  m_dopplerLevel: 1
+  m_spread: 0
+  m_minDistance: 0.1
+  m_maxDistance: 500
+  m_ignoreListenerVolume: 0
+  m_PlayOnAwake: 1
+--- !u!82 &6258399242702045902
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390282372948246467}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 79dbe8699107e4874ba2557db146b121, type: 3}
+  m_volume: 0
+  m_pitch: 1
+  m_loop: 1
+  m_mute: 0
+  m_spatialBlend: 0
+  m_rolloffMode: 0
+  m_dopplerLevel: 1
+  m_spread: 0
+  m_minDistance: 0.1
+  m_maxDistance: 500
+  m_ignoreListenerVolume: 0
+  m_PlayOnAwake: 1
+--- !u!114 &6258399242702045903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390282372948246467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b2c3d4e5f60718293a4b5c6d7e8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundController
+  audioPsychedelia: {fileID: 6258399242702045901}
+  audioHappiness: {fileID: 6258399242702045902}
