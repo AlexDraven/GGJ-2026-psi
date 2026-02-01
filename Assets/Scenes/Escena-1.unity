@@ -2752,6 +2752,14 @@ PrefabInstance:
       propertyPath: impactoCaidaVentana
       value: 
       objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: Mejor otro dia...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: '*Tirarse...*'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4593,6 +4601,14 @@ PrefabInstance:
       propertyPath: impactoCaidaVentana
       value: 
       objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: Mejor otro dia...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: '*Tirarse...*'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7116,6 +7132,14 @@ PrefabInstance:
       propertyPath: impactoCaidaVentana
       value: 
       objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: Mejor otro dia...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: '*Tirarse...*'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7742,6 +7766,14 @@ PrefabInstance:
       propertyPath: impactoCaidaVentana
       value: 
       objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: Mejor otro dia...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: '*Tirarse...*'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
