@@ -5536,6 +5536,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
+      propertyPath: "pi\xF1aSprite"
+      value: 
+      objectReference: {fileID: 7727044383278236125, guid: 5b7702d6e408849b78e6b82f43ac1ea5, type: 3}
+    - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: speakerName
       value: Jefe GustaBot
       objectReference: {fileID: 0}

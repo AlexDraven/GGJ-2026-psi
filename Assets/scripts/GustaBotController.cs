@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Jefe GustaBot: si psicodelia > 0.8 muestra diálogo especial con dos opciones;
@@ -7,6 +10,7 @@ using UnityEngine;
 public class GustaBotController : NpcController, IOnDialogueClosed
 {
     const float PsychedeliaThreshold = 0.8f;
+    const string MainMenuSceneName = "MainMenu";
 
     static readonly string[] AlternateDialogueLines = new[]
     {
@@ -26,6 +30,8 @@ public class GustaBotController : NpcController, IOnDialogueClosed
     [SerializeField] float[] alternateHappinessDeltas = new float[] { 0f, 0.1f };
     [Tooltip("Sonido al elegir *Pegarle una trompada*.")]
     [SerializeField] AudioClip sonidoTrompada;
+    [Tooltip("Imagen 'Piña' a pantalla completa al elegir trompada. Si está asignado, se muestra hasta pulsar A (Xbox) o E (teclado).")]
+    [SerializeField] Sprite piñaSprite;
 
     bool alternateDialogueActive;
 
@@ -72,19 +78,72 @@ public class GustaBotController : NpcController, IOnDialogueClosed
     public override string[] GetResponseLinesAfterChoice(int choiceIndex)
     {
         if (alternateDialogueActive)
-        {
-            if (choiceIndex == 1)
-                return new[] { "*¡POW!*" };
             return null;
-        }
         return base.GetResponseLinesAfterChoice(choiceIndex);
     }
 
     public override void OnChoiceSelected(int choiceIndex, string chosen)
     {
         base.OnChoiceSelected(choiceIndex, chosen);
-        if (choiceIndex == 1 && sonidoTrompada != null)
+        if (choiceIndex == 1)
+            StartCoroutine(PiñaSequence());
+    }
+
+    IEnumerator PiñaSequence()
+    {
+        yield return null;
+
+        if (piñaSprite == null)
+            yield break;
+
+        SoundController.SuppressMusic = true;
+        var soundController = FindFirstObjectByType<SoundController>();
+        if (soundController != null)
+            soundController.StopMusic();
+        foreach (var source in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+            source.Stop();
+
+        if (sonidoTrompada != null)
             AudioSource.PlayClipAtPoint(sonidoTrompada, transform.position, 1f);
+
+        var canvasGo = new GameObject("GustaBotPiñaOverlay");
+        var canvas = canvasGo.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 9999;
+        canvasGo.AddComponent<CanvasScaler>();
+        canvasGo.AddComponent<GraphicRaycaster>();
+
+        var imageGo = new GameObject("Image");
+        imageGo.transform.SetParent(canvasGo.transform, false);
+        var rect = imageGo.AddComponent<RectTransform>();
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+
+        var image = imageGo.AddComponent<Image>();
+        image.color = Color.black;
+
+        yield return new WaitForSeconds(2f);
+
+        image.sprite = piñaSprite;
+        image.color = Color.white;
+
+        yield return new WaitForSeconds(5f);
+
+        while (true)
+        {
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+                break;
+            if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+                break;
+            yield return null;
+        }
+
+        SoundController.SuppressMusic = false;
+        Destroy(canvasGo);
+        if (GameController.Instance != null)
+            GameController.Instance.LoadScene(MainMenuSceneName);
     }
 
     public void OnDialogueClosed()

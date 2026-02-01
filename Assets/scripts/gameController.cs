@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     [Header("Scenes")]
     [SerializeField] string gameSceneName = "Escena-1";
+    [SerializeField] string mainMenuSceneName = "MainMenu";
 
     [Header("Pause")]
     [SerializeField] InputActionAsset inputActions;
@@ -118,13 +119,28 @@ public class GameController : MonoBehaviour
         // timeScale queda en 1 para que la escena siga animándose; cambiar a 0f si prefieres congelar
     }
 
+    /// <summary>Restaura el estado del juego a valores por defecto (como la primera vez).</summary>
+    public void ResetToDefaults()
+    {
+        lastDialogueResponse = "";
+        isInDialogue = false;
+        isInVentanaSequence = false;
+        psychedeliaLevel = 0f;
+        happinessLevel = 0f;
+        currentState = GameState.Playing;
+        Time.timeScale = 1f;
+    }
+
     public void LoadScene(string sceneName)
     {
+        if (sceneName == mainMenuSceneName)
+            ResetToDefaults();
         SceneManager.LoadScene(sceneName);
     }
 
     public void LoadGameScene()
     {
+        ResetToDefaults();
         Debug.Log($"[GameController] Cargando escena de juego: {gameSceneName}");
         LoadScene(gameSceneName);
     }
