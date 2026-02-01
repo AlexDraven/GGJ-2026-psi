@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     InputAction interactAction;
     InputAction sprintAction;
     Vector2 lastMoveDirection = Vector2.down;
+    Vector3 baseScale;
 
     void Awake()
     {
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
             interactAction = playerMap.FindAction("Interact");
             sprintAction = playerMap.FindAction("Sprint");
         }
+        baseScale = transform.localScale;
     }
 
     void OnEnable()
@@ -104,8 +106,8 @@ public class PlayerController : MonoBehaviour
     {
         if (lastMoveDirection.sqrMagnitude < 0.01f)
             return;
-        float scaleX = lastMoveDirection.x < 0 ? -1f : 1f;
-        transform.localScale = new Vector3(scaleX, 1f, 1f);
+        float signX = lastMoveDirection.x < 0 ? -1f : 1f;
+        transform.localScale = new Vector3(baseScale.x * signX, baseScale.y, baseScale.z);
     }
 
     bool CanAct()
