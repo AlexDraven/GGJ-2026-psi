@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Ventana interactuable: con felicidad > 0.2 muestra "*mejor dejo la ventana cerrada...*";
@@ -19,6 +20,9 @@ public class VentanaController : NpcController
 
     [Tooltip("Sonido de impacto/caída al tirarse por la ventana.")]
     [SerializeField] AudioClip impactoCaidaVentana;
+
+    [Tooltip("Imagen 'Moriste' a pantalla completa tras el audio. Si está asignado, se muestra hasta pulsar A (Xbox) o E (teclado).")]
+    [SerializeField] Sprite moristeSprite;
 
     GameObject runtimeBlackOverlay;
 
@@ -79,12 +83,39 @@ public class VentanaController : NpcController
         float waitTime = (impactoCaidaVentana != null) ? impactoCaidaVentana.length : 1f;
         yield return new WaitForSeconds(waitTime);
 
+        if (moristeSprite != null)
+        {
+            var overlayImage = GetOverlayImage();
+            if (overlayImage != null)
+            {
+                overlayImage.sprite = moristeSprite;
+                overlayImage.color = Color.white;
+            }
+            while (true)
+            {
+                if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+                    break;
+                if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+                    break;
+                yield return null;
+            }
+        }
+
         SoundController.SuppressMusic = false;
         if (GameController.Instance != null)
         {
             GameController.Instance.SetInVentanaSequence(false);
             GameController.Instance.LoadScene(MainMenuSceneName);
         }
+    }
+
+    Image GetOverlayImage()
+    {
+        if (blackOverlay != null)
+            return blackOverlay;
+        if (runtimeBlackOverlay != null)
+            return runtimeBlackOverlay.GetComponentInChildren<Image>(true);
+        return null;
     }
 
     void ShowBlackOverlay()

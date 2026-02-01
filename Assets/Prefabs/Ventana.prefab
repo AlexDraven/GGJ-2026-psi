@@ -168,6 +168,7 @@ MonoBehaviour:
   - 
   blackOverlay: {fileID: 0}
   impactoCaidaVentana: {fileID: 8300000, guid: c99e5ca8476764280b0f7e5b54c9d258, type: 3}
+  moristeSprite: {fileID: -7286772229096610704, guid: bd92b92b1c8ef4013a304494ad14be6d, type: 3}
 --- !u!82 &4867499338125603685
 AudioSource:
   m_ObjectHideFlags: 0
