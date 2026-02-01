@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Lee PsychedeliaLevel y HappinessLevel de GameController y aplica esos valores
@@ -16,10 +17,20 @@ public class SoundController : MonoBehaviour
     [Tooltip("Volumen máximo de las pistas (0-1). El nivel del juego se multiplica por este valor.")]
     [SerializeField] [Range(0f, 1f)] float volumeMax = 0.5f;
 
+    [Header("Ambiente oficina")]
+    [Tooltip("Pista Oficina (SIN ruido ambiente); se reproduce solo en juego cuando ambos niveles < 0.5.")]
+    [SerializeField] AudioSource audioOficina;
+    [Tooltip("Solo reproducir oficina en esta escena (no en menú).")]
+    [SerializeField] string gameSceneName = "Escena-1";
+    [Tooltip("Volumen de la pista de oficina (0-1).")]
+    [SerializeField] [Range(0f, 1f)] float volumeOficina = 0.5f;
+
     void Start()
     {
         if (audioPsychedelia != null)
             audioPsychedelia.loop = true;
+        if (audioOficina != null)
+            audioOficina.loop = true;
     }
 
     void Update()
@@ -39,14 +50,32 @@ public class SoundController : MonoBehaviour
             if (audioHappiness.volume > 0f && !audioHappiness.isPlaying)
                 audioHappiness.Play();
         }
+
+        bool playOficina = SceneManager.GetActiveScene().name == gameSceneName
+            && GameController.Instance.CurrentState == GameController.GameState.Playing
+            && GameController.Instance.PsychedeliaLevel < 0.5f
+            && GameController.Instance.HappinessLevel < 0.5f;
+        if (audioOficina != null)
+        {
+            if (playOficina)
+            {
+                audioOficina.volume = volumeOficina;
+                if (!audioOficina.isPlaying)
+                    audioOficina.Play();
+            }
+            else
+                audioOficina.Stop();
+        }
     }
 
-    /// <summary>Apaga la música de psicodelia y felicidad (p. ej. antes del sonido de impacto ventana).</summary>
+    /// <summary>Apaga la música de psicodelia, felicidad y oficina (p. ej. antes del sonido de impacto ventana).</summary>
     public void StopMusic()
     {
         if (audioPsychedelia != null)
             audioPsychedelia.Stop();
         if (audioHappiness != null)
             audioHappiness.Stop();
+        if (audioOficina != null)
+            audioOficina.Stop();
     }
 }
