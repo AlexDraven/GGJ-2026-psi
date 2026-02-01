@@ -4509,6 +4509,11 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 1
+--- !u!4 &1071782145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+  m_PrefabInstance: {fileID: 1723872992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1087978509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6792,6 +6797,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: speakerName
+      value: Escritorio
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: dialogueText
+      value: Deberia trabaja...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: dialogueChoices.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: happinessDeltas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4063194bbccc0413c825187ef4f7bc83, type: 3}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d860432c2e29641a79bd3fa1a637185c, type: 3}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: psychedeliaDeltas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: '*ponerse a trabajar*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: Mejor en otro momento...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: responseAfterChoice.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[0]'
+      value: '*Pasas un rato trabajando y te aburres mas*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[1]'
+      value: Que se cage el GustaBot ese
+      objectReference: {fileID: 0}
     - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6858,7 +6923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Size.y
-      value: 3.813173
+      value: 5.2883687
       objectReference: {fileID: 0}
     - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Offset.x
@@ -6866,7 +6931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.23062956
+      value: -0.50696826
       objectReference: {fileID: 0}
     - target: {fileID: 9096696580535014958, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Name
@@ -6874,7 +6939,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 2031733603}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
 --- !u!4 &1730830891 stripped
@@ -7916,12 +7984,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031733601}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 9.66, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1299999, y: -2.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1071782145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2031733604
 BoxCollider2D:
@@ -7930,7 +7998,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031733601}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -8642,7 +8710,6 @@ SceneRoots:
   - {fileID: 1119360837}
   - {fileID: 592179903}
   - {fileID: 1723872992}
-  - {fileID: 2031733603}
   - {fileID: 1423171467}
   - {fileID: 1149529048}
   - {fileID: 1366578920}
