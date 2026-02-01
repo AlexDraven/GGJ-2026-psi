@@ -25,6 +25,9 @@ public class SoundController : MonoBehaviour
     [Tooltip("Volumen de la pista de oficina (0-1).")]
     [SerializeField] [Range(0f, 1f)] float volumeOficina = 0.5f;
 
+    /// <summary>Si true, no se reproduce ninguna pista (p. ej. durante la secuencia de tirarse por la ventana).</summary>
+    public static bool SuppressMusic { get; set; }
+
     void Start()
     {
         if (audioPsychedelia != null)
@@ -35,6 +38,11 @@ public class SoundController : MonoBehaviour
 
     void Update()
     {
+        if (SuppressMusic)
+        {
+            StopMusic();
+            return;
+        }
         if (GameController.Instance == null)
             return;
 

@@ -51,19 +51,34 @@ public class VentanaController : NpcController
 
         ShowBlackOverlay();
 
+        if (GameController.Instance != null)
+        {
+            GameController.Instance.AddPsychedelia(-GameController.Instance.PsychedeliaLevel);
+            GameController.Instance.AddHappiness(-GameController.Instance.HappinessLevel);
+        }
+
+        SoundController.SuppressMusic = true;
         var soundController = FindFirstObjectByType<SoundController>();
         if (soundController != null)
             soundController.StopMusic();
 
+        var ventanaAudio = GetComponent<AudioSource>();
+        foreach (var source in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+        {
+            if (source != ventanaAudio)
+                source.Stop();
+        }
+
         yield return new WaitForSeconds(1f);
 
-        var audioSource = GetComponent<AudioSource>();
+        var audioSource = ventanaAudio;
         if (audioSource != null && impactoCaidaVentana != null)
             audioSource.PlayOneShot(impactoCaidaVentana);
 
         float waitTime = (impactoCaidaVentana != null) ? impactoCaidaVentana.length : 1f;
         yield return new WaitForSeconds(waitTime);
 
+        SoundController.SuppressMusic = false;
         if (GameController.Instance != null)
             GameController.Instance.LoadScene(MainMenuSceneName);
     }
