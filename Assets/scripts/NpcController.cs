@@ -13,6 +13,8 @@ public class NpcController : MonoBehaviour
     [SerializeField] float[] happinessDeltas;
     [Tooltip("Texto de respuesta del NPC/objeto por opción (índice 0 = primera opción). Varias líneas = separar con Enter. Vacío = no hay respuesta, se cierra el diálogo.")]
     [SerializeField] string[] responseAfterChoice;
+    [Tooltip("Opcional: sonido a reproducir al elegir cada opción (índice 0 = primera opción). Ej: VOZ Comiendo para la opción de comer yogurt.")]
+    [SerializeField] AudioClip[] audioOnChoice;
 
     bool playerInRange;
 
@@ -44,7 +46,11 @@ public class NpcController : MonoBehaviour
     }
 
     /// <summary>Llamado por DialogueManager al confirmar una opción. Override en herederos (p. ej. VentanaController) para reaccionar.</summary>
-    public virtual void OnChoiceSelected(int choiceIndex, string chosen) { }
+    public virtual void OnChoiceSelected(int choiceIndex, string chosen)
+    {
+        if (audioOnChoice != null && choiceIndex >= 0 && choiceIndex < audioOnChoice.Length && audioOnChoice[choiceIndex] != null)
+            AudioSource.PlayClipAtPoint(audioOnChoice[choiceIndex], transform.position, 1f);
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -2178,7 +2178,7 @@ Transform:
   m_GameObject: {fileID: 472573584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.55812, y: 1.75, z: 0}
+  m_LocalPosition: {x: 18.55812, y: 1.75, z: 0.2}
   m_LocalScale: {x: 1.5, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2260,6 +2260,10 @@ PrefabInstance:
       value: '*Encuentras un yogurt vencido*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2267,6 +2271,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
@@ -2305,7 +2313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2820,7 +2828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4666,7 +4674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5454,6 +5462,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.19539213
       objectReference: {fileID: 0}
+    - target: {fileID: 5029754542068685014, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Size.x
       value: 6.7427177
@@ -5951,6 +5963,10 @@ PrefabInstance:
       value: '*Son medialunas de ayer...*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -5958,6 +5974,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
@@ -7119,6 +7139,10 @@ PrefabInstance:
       value: '*Son medialunas de ayer...*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7126,6 +7150,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
@@ -7386,6 +7414,7 @@ GameObject:
   - component: {fileID: 2017905892}
   - component: {fileID: 2017905893}
   - component: {fileID: 2017905894}
+  - component: {fileID: 2017905895}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7427,6 +7456,9 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   gameController: {fileID: 0}
   interactRadius: 1.5
+  pasos: {fileID: 8300000, guid: 615b99df8da4d4242b7db21623f7180b, type: 3}
+  volumePasos: 1
+  audioPasos: {fileID: 0}
 --- !u!61 &2017905892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7522,6 +7554,103 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &2017905895
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017905888}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2031733601
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,7 +8087,7 @@ Transform:
   m_GameObject: {fileID: 2086683697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.4, y: -9.24, z: 0.09}
+  m_LocalPosition: {x: 28.4, y: -9.24, z: 0.4}
   m_LocalScale: {x: 7.4, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8086,6 +8215,10 @@ PrefabInstance:
       value: '*Son medialunas de ayer...*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -8093,6 +8226,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
