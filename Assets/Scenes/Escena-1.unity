@@ -5547,7 +5547,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
-      propertyPath: "pi\xF1aSprite"
+      propertyPath: pinaSprite
       value: 
       objectReference: {fileID: -7752487876264238410, guid: 083289f9e4be54b8eaced462aa16eca0, type: 3}
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}

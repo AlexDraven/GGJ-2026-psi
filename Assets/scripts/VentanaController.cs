@@ -81,7 +81,7 @@ public class VentanaController : NpcController
             audioSource.PlayOneShot(impactoCaidaVentana);
 
         float waitTime = (impactoCaidaVentana != null) ? impactoCaidaVentana.length : 1f;
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(6f);
 
         if (moristeSprite != null)
         {

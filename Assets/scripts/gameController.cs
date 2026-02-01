@@ -158,11 +158,24 @@ public class GameController : MonoBehaviour
         var canvas = canvasGo.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvas.sortingOrder = 9999;
-        canvasGo.AddComponent<CanvasScaler>();
+        var scaler = canvasGo.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.matchWidthOrHeight = 0.5f;
         canvasGo.AddComponent<GraphicRaycaster>();
 
+        var panelGo = new GameObject("Panel");
+        panelGo.transform.SetParent(canvasGo.transform, false);
+        var panelRect = panelGo.AddComponent<RectTransform>();
+        panelRect.anchorMin = Vector2.zero;
+        panelRect.anchorMax = Vector2.one;
+        panelRect.offsetMin = Vector2.zero;
+        panelRect.offsetMax = Vector2.zero;
+        var panelImage = panelGo.AddComponent<Image>();
+        panelImage.color = Color.clear;
+
         var imageGo = new GameObject("Image");
-        imageGo.transform.SetParent(canvasGo.transform, false);
+        imageGo.transform.SetParent(panelGo.transform, false);
         var rect = imageGo.AddComponent<RectTransform>();
         rect.anchorMin = Vector2.zero;
         rect.anchorMax = Vector2.one;
@@ -171,6 +184,7 @@ public class GameController : MonoBehaviour
 
         var image = imageGo.AddComponent<Image>();
         image.color = Color.black;
+        image.preserveAspect = false;
 
         SetInVentanaSequence(true);
 
@@ -187,7 +201,7 @@ public class GameController : MonoBehaviour
             AudioSource.PlayClipAtPoint(sonidoTrompada, Vector3.zero, 1f);
 
         float waitTime = (sonidoTrompada != null) ? sonidoTrompada.length : 1f;
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(2f);
 
         image.sprite = piñaSprite;
         image.color = Color.white;

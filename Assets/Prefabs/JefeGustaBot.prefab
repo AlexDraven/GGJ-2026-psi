@@ -273,4 +273,4 @@ MonoBehaviour:
   alternatePsychedeliaDeltas: []
   alternateHappinessDeltas: []
   sonidoTrompada: {fileID: 8300000, guid: 097c27db573b14cb8a1768d255fed8aa, type: 3}
-  "pi\xF1aSprite": {fileID: -7752487876264238410, guid: 083289f9e4be54b8eaced462aa16eca0, type: 3}
+  pinaSprite: {fileID: -7752487876264238410, guid: 083289f9e4be54b8eaced462aa16eca0, type: 3}

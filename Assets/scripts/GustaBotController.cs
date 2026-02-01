@@ -28,7 +28,7 @@ public class GustaBotController : NpcController, IOnDialogueClosed
     [Tooltip("Sonido al elegir *Pegarle una trompada*.")]
     [SerializeField] AudioClip sonidoTrompada;
     [Tooltip("Imagen 'Piña' a pantalla completa al elegir trompada. Si está asignado, se muestra hasta pulsar A (Xbox) o E (teclado).")]
-    [SerializeField] Sprite piñaSprite;
+    [SerializeField] Sprite pinaSprite;
 
     bool alternateDialogueActive;
 
@@ -87,7 +87,7 @@ public class GustaBotController : NpcController, IOnDialogueClosed
             if (DialogueManager.Instance != null)
                 DialogueManager.Instance.Close();
             if (GameController.Instance != null)
-                GameController.Instance.RunPiñaSequence(piñaSprite, sonidoTrompada);
+                GameController.Instance.RunPiñaSequence(pinaSprite, sonidoTrompada);
         }
     }
 
