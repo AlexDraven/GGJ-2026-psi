@@ -5541,7 +5541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueText
-      value: Que quere?
+      value: Tenes mucha tarea pendiente...
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: playVoiceInDialogue
@@ -5549,19 +5549,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: happinessDeltas.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: Si Jefe...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[1]'
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: responseAfterChoice.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[0]'
+      value: Si necesitas algo HACEMELO SABER...
       objectReference: {fileID: 0}
     - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Sprite
