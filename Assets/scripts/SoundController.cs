@@ -13,6 +13,9 @@ public class SoundController : MonoBehaviour
     [Tooltip("Pista cuyo volumen sigue GameController.HappinessLevel (0-1).")]
     [SerializeField] AudioSource audioHappiness;
 
+    [Tooltip("Volumen máximo de las pistas (0-1). El nivel del juego se multiplica por este valor.")]
+    [SerializeField] [Range(0f, 1f)] float volumeMax = 0.5f;
+
     void Start()
     {
         if (audioPsychedelia != null)
@@ -26,13 +29,13 @@ public class SoundController : MonoBehaviour
 
         if (audioPsychedelia != null)
         {
-            audioPsychedelia.volume = GameController.Instance.PsychedeliaLevel;
+            audioPsychedelia.volume = GameController.Instance.PsychedeliaLevel * volumeMax;
             if (audioPsychedelia.volume > 0f && !audioPsychedelia.isPlaying)
                 audioPsychedelia.Play();
         }
         if (audioHappiness != null)
         {
-            audioHappiness.volume = GameController.Instance.HappinessLevel;
+            audioHappiness.volume = GameController.Instance.HappinessLevel * volumeMax;
             if (audioHappiness.volume > 0f && !audioHappiness.isPlaying)
                 audioHappiness.Play();
         }
