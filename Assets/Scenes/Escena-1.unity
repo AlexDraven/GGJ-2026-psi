@@ -4749,6 +4749,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: speakerName
+      value: Inodoro
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: dialogueText
+      value: '*El portero roberto hace un buen trabajo*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: '*Cagar*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: '*Vomitar*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[2]'
+      value: '*No hacer nada*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[1]'
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[0]'
+      value: '*No puedo ahora, esta roberto ahi...*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[1]'
+      value: '*Vomitas y te sientes mas aliviado*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5530,6 +5582,152 @@ PrefabInstance:
     - target: {fileID: 9096696580535014958, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Name
       value: Ficheros (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+--- !u!1001 &1349749366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: speakerName
+      value: Portero Roberto
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: dialogueText
+      value: Quere proba estas pastis?...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[0]'
+      value: "\xBFQu\xE9 hay de nuevo Roberto?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[1]'
+      value: "\xBFPuedo preguntar cuanto cobras?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'dialogueChoices.Array.data[2]'
+      value: '*Aceptar las pastillas*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'happinessDeltas.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'psychedeliaDeltas.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[0]'
+      value: "Desde que levantaron las antenas de 5G me afloraron las hemorroides,
+        pero la obra social no me cree. Ahora me estoy peleando con el gremio para 
+        que apaguen el wifi, el partido comunista chino esp\xEDa nuestros pensamientos "
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[1]'
+      value: "Aca cobro la minima, pero me financi\xF3 vendiendo y comprando lencer\xEDa
+        en internet"
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'responseAfterChoice.Array.data[2]'
+      value: "veo que decidiste el camino de la verdad. Ten\xE9 cuidado, el voltaje
+        nos muestra las cosas tal como son, pero eso es demasiado para las mentes
+        d\xE9biles. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4160210906641106028, guid: 1ff40569ce456475fb4cf5f5b895f912, type: 3}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923736964444257936, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Size.x
+      value: 2.064108
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923736964444257936, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Size.y
+      value: 3.8178554
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923736964444257936, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6049204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923736964444257936, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.35809064
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Size.x
+      value: 3.1062381
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320461026531299759, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.42081892
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379489434199257010, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096696580535014958, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: m_Name
+      value: Portero Roberto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7800,7 +7998,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.03849709}
+  m_Offset: {x: 0, y: 0.04266441}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7810,7 +8008,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.39, y: 5.310711}
+  m_Size: {x: 4.39, y: 5.473034}
   m_EdgeRadius: 0
 --- !u!212 &2086683700
 SpriteRenderer:
@@ -8143,3 +8341,4 @@ SceneRoots:
   - {fileID: 1766160442}
   - {fileID: 1829903821}
   - {fileID: 1105697823}
+  - {fileID: 1349749366}
