@@ -25,15 +25,33 @@ public class SoundController : MonoBehaviour
     [Tooltip("Volumen de la pista de oficina (0-1).")]
     [SerializeField] [Range(0f, 1f)] float volumeOficina = 0.5f;
 
+    [Header("Menú")]
+    [Tooltip("Pista de menú (Music Menu Inicio + ambiente). Solo se reproduce cuando la escena activa es Main Menu.")]
+    [SerializeField] AudioSource audioMenu;
+    [Tooltip("Clip de menú. Si audioMenu no tiene clip asignado en el prefab, se usa este en runtime.")]
+    [SerializeField] AudioClip menuMusicClip;
+    [SerializeField] string mainMenuSceneName = "MainMenu";
+    [Tooltip("Volumen de la música de menú (0-1).")]
+    [SerializeField] [Range(0f, 1f)] float volumeMenu = 0.5f;
+
     /// <summary>Si true, no se reproduce ninguna pista (p. ej. durante la secuencia de tirarse por la ventana).</summary>
     public static bool SuppressMusic { get; set; }
+
+    void Awake()
+    {
+        SuppressMusic = false;
+    }
 
     void Start()
     {
         if (audioPsychedelia != null)
             audioPsychedelia.loop = true;
+        if (audioHappiness != null)
+            audioHappiness.loop = true;
         if (audioOficina != null)
             audioOficina.loop = true;
+        if (audioMenu != null)
+            audioMenu.loop = true;
     }
 
     void Update()
@@ -43,6 +61,24 @@ public class SoundController : MonoBehaviour
             StopMusic();
             return;
         }
+
+        if (SceneManager.GetActiveScene().name == mainMenuSceneName)
+        {
+            StopGameMusic();
+            if (audioMenu != null)
+            {
+                if (audioMenu.clip == null && menuMusicClip != null)
+                    audioMenu.clip = menuMusicClip;
+                audioMenu.volume = volumeMenu;
+                if (!audioMenu.isPlaying && audioMenu.clip != null)
+                    audioMenu.Play();
+            }
+            return;
+        }
+
+        if (audioMenu != null)
+            audioMenu.Stop();
+
         if (GameController.Instance == null)
             return;
 
@@ -76,8 +112,8 @@ public class SoundController : MonoBehaviour
         }
     }
 
-    /// <summary>Apaga la música de psicodelia, felicidad y oficina (p. ej. antes del sonido de impacto ventana).</summary>
-    public void StopMusic()
+    /// <summary>Apaga solo la música de juego (psicodelia, felicidad, oficina). No para la música de menú.</summary>
+    void StopGameMusic()
     {
         if (audioPsychedelia != null)
             audioPsychedelia.Stop();
@@ -85,5 +121,13 @@ public class SoundController : MonoBehaviour
             audioHappiness.Stop();
         if (audioOficina != null)
             audioOficina.Stop();
+    }
+
+    /// <summary>Apaga la música de psicodelia, felicidad, oficina y menú (p. ej. antes del sonido de impacto ventana).</summary>
+    public void StopMusic()
+    {
+        StopGameMusic();
+        if (audioMenu != null)
+            audioMenu.Stop();
     }
 }

@@ -134,7 +134,10 @@ public class GameController : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         if (sceneName == mainMenuSceneName)
+        {
             ResetToDefaults();
+            SoundController.SuppressMusic = false;
+        }
         SceneManager.LoadScene(sceneName);
     }
 
