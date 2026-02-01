@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
     public bool IsInDialogue => isInDialogue;
     public void SetInDialogue(bool value) { isInDialogue = value; }
 
+    bool isInVentanaSequence;
+    public bool IsInVentanaSequence => isInVentanaSequence;
+    public void SetInVentanaSequence(bool value) { isInVentanaSequence = value; }
+
     [Header("Psychedelia")]
     [Tooltip("Nivel de psicodelia del personaje (0-1). Fuente de verdad para el efecto de cámara.")]
     [SerializeField, Range(0f, 1f)] float psychedeliaLevel;

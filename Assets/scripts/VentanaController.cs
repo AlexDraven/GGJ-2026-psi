@@ -53,6 +53,7 @@ public class VentanaController : NpcController
 
         if (GameController.Instance != null)
         {
+            GameController.Instance.SetInVentanaSequence(true);
             GameController.Instance.AddPsychedelia(-GameController.Instance.PsychedeliaLevel);
             GameController.Instance.AddHappiness(-GameController.Instance.HappinessLevel);
         }
@@ -80,7 +81,10 @@ public class VentanaController : NpcController
 
         SoundController.SuppressMusic = false;
         if (GameController.Instance != null)
+        {
+            GameController.Instance.SetInVentanaSequence(false);
             GameController.Instance.LoadScene(MainMenuSceneName);
+        }
     }
 
     void ShowBlackOverlay()

@@ -97,6 +97,13 @@ public class PlayerController : MonoBehaviour
             UpdatePasos(false);
             return;
         }
+        if (gameController != null && gameController.IsInVentanaSequence)
+        {
+            if (rb != null)
+                rb.linearVelocity = Vector2.zero;
+            UpdatePasos(false);
+            return;
+        }
         if (moveAction == null || rb == null)
             return;
 
