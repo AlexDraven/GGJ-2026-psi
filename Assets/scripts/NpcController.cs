@@ -24,7 +24,7 @@ public class NpcController : MonoBehaviour
     public bool PlayVoiceInDialogue => playVoiceInDialogue;
 
     /// <summary>Devuelve las líneas de respuesta para la opción elegida, o null si no hay.</summary>
-    public string[] GetResponseLinesAfterChoice(int choiceIndex)
+    public virtual string[] GetResponseLinesAfterChoice(int choiceIndex)
     {
         if (responseAfterChoice == null || choiceIndex < 0 || choiceIndex >= responseAfterChoice.Length)
             return null;
@@ -35,7 +35,7 @@ public class NpcController : MonoBehaviour
     }
 
     /// <summary>Devuelve el delta de psicodelia para la opción elegida. 0 si no hay datos.</summary>
-    public float GetPsychedeliaDeltaForChoice(int choiceIndex)
+    public virtual float GetPsychedeliaDeltaForChoice(int choiceIndex)
     {
         if (psychedeliaDeltas == null || choiceIndex < 0 || choiceIndex >= psychedeliaDeltas.Length)
             return 0f;
@@ -43,7 +43,7 @@ public class NpcController : MonoBehaviour
     }
 
     /// <summary>Devuelve el delta de felicidad para la opción elegida. 0 si no hay datos.</summary>
-    public float GetHappinessDeltaForChoice(int choiceIndex)
+    public virtual float GetHappinessDeltaForChoice(int choiceIndex)
     {
         if (happinessDeltas == null || choiceIndex < 0 || choiceIndex >= happinessDeltas.Length)
             return 0f;

@@ -257,5 +257,8 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.HideOptions();
             dialogueUI.Hide();
         }
+
+        if (dialogueOwner is IOnDialogueClosed onClosed)
+            onClosed.OnDialogueClosed();
     }
 }
