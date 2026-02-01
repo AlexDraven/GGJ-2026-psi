@@ -2947,6 +2947,14 @@ PrefabInstance:
       propertyPath: responseAfterChoice.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.data[0]
+      value: 
+      objectReference: {fileID: 0, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Sprite
       value: 
