@@ -138,7 +138,7 @@ public class DialogueManager : MonoBehaviour
 
         var fullText = lines[lineIndex];
         dialogueUI.SetDialogueText("");
-        if (dialogueOwner != null && dialogueOwner.PlayVoiceInDialogue && voiceDialogueClip != null && audioVoiceDialogue != null)
+        if (lineIndex > 0 && dialogueOwner != null && dialogueOwner.PlayVoiceInDialogue && voiceDialogueClip != null && audioVoiceDialogue != null)
         {
             audioVoiceDialogue.clip = voiceDialogueClip;
             audioVoiceDialogue.loop = true;

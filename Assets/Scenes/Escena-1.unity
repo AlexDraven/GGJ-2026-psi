@@ -4381,6 +4381,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &962767059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6258399242702045900, guid: bc6c926e31dfd4e678b5827e9994be41, type: 3}
+  m_PrefabInstance: {fileID: 1888777000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ad51a413b7c4931b2b17772428762c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameController
 --- !u!4 &991548456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1542567802547782173, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
@@ -5538,7 +5549,7 @@ PrefabInstance:
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: "pi\xF1aSprite"
       value: 
-      objectReference: {fileID: 7727044383278236125, guid: 5b7702d6e408849b78e6b82f43ac1ea5, type: 3}
+      objectReference: {fileID: -7752487876264238410, guid: 083289f9e4be54b8eaced462aa16eca0, type: 3}
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: speakerName
       value: Jefe GustaBot
@@ -5547,6 +5558,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: Escuchame GuillerMo Nitor, tenes mucha tarea pendiente...
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
+      propertyPath: sonidoTrompada
+      value: 
+      objectReference: {fileID: 8300000, guid: 097c27db573b14cb8a1768d255fed8aa, type: 3}
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: playVoiceInDialogue
       value: 1
@@ -5590,6 +5605,14 @@ PrefabInstance:
     - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: 'responseAfterChoice.Array.data[0]'
       value: Si necesitas algo HACEMELO SABER...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
+      propertyPath: alternateHappinessDeltas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
+      propertyPath: alternatePsychedeliaDeltas.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 94401391091668240, guid: b2c3d4e5f6a7890123456789abcdef02, type: 3}
       propertyPath: m_Sprite
@@ -7777,7 +7800,7 @@ MonoBehaviour:
   moveSpeed: 10
   runSpeedMultiplier: 1.5
   inputActions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
-  gameController: {fileID: 0}
+  gameController: {fileID: 962767059}
   interactRadius: 1.5
   pasos: {fileID: 8300000, guid: 615b99df8da4d4242b7db21623f7180b, type: 3}
   volumePasos: 1

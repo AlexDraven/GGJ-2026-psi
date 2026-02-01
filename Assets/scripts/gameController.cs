@@ -1,6 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -139,6 +141,75 @@ public class GameController : MonoBehaviour
             SoundController.SuppressMusic = false;
         }
         SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>Ejecuta la secuencia de trompada (pantalla negra, sonido, imagen piña). Se ejecuta en GameController para que no se interrumpa si el NPC se desactiva.</summary>
+    public void RunPiñaSequence(Sprite piñaSprite, AudioClip sonidoTrompada)
+    {
+        StartCoroutine(PiñaSequenceCoroutine(piñaSprite, sonidoTrompada));
+    }
+
+    IEnumerator PiñaSequenceCoroutine(Sprite piñaSprite, AudioClip sonidoTrompada)
+    {
+        if (piñaSprite == null)
+            yield break;
+
+        var canvasGo = new GameObject("GustaBotPiñaOverlay");
+        var canvas = canvasGo.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 9999;
+        canvasGo.AddComponent<CanvasScaler>();
+        canvasGo.AddComponent<GraphicRaycaster>();
+
+        var imageGo = new GameObject("Image");
+        imageGo.transform.SetParent(canvasGo.transform, false);
+        var rect = imageGo.AddComponent<RectTransform>();
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+
+        var image = imageGo.AddComponent<Image>();
+        image.color = Color.black;
+
+        SetInVentanaSequence(true);
+
+        SoundController.SuppressMusic = true;
+        var soundController = FindFirstObjectByType<SoundController>();
+        if (soundController != null)
+            soundController.StopMusic();
+        foreach (var source in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+            source.Stop();
+
+        yield return new WaitForSeconds(1f);
+
+        if (sonidoTrompada != null)
+            AudioSource.PlayClipAtPoint(sonidoTrompada, Vector3.zero, 1f);
+
+        float waitTime = (sonidoTrompada != null) ? sonidoTrompada.length : 1f;
+        yield return new WaitForSeconds(waitTime);
+
+        image.sprite = piñaSprite;
+        image.color = Color.white;
+        image.SetAllDirty();
+        Canvas.ForceUpdateCanvases();
+        yield return null;
+
+        yield return new WaitForSeconds(5f);
+
+        while (true)
+        {
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+                break;
+            if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+                break;
+            yield return null;
+        }
+
+        SoundController.SuppressMusic = false;
+        SetInVentanaSequence(false);
+        LoadScene(mainMenuSceneName);
+        Destroy(canvasGo);
     }
 
     public void LoadGameScene()

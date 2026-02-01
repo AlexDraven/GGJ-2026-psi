@@ -70,8 +70,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Con diálogo activo, desactivar Move y Sprint para que las flechas no muevan al personaje
-        if (gameController != null && gameController.IsInDialogue)
+        // Con diálogo o secuencia pantalla completa (ventana/trompada), desactivar Move y Sprint
+        if (gameController != null && (gameController.IsInDialogue || gameController.IsInVentanaSequence))
         {
             moveAction?.Disable();
             sprintAction?.Disable();
