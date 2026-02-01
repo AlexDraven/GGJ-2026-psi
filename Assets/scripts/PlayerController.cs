@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -13,6 +14,14 @@ public class PlayerController : MonoBehaviour
     [Header("Game")]
     [SerializeField] GameController gameController;
     [SerializeField] float interactRadius = 1.5f;
+
+    [Header("Audio")]
+    [Tooltip("Sonido de pasos mientras el personaje camina.")]
+    [SerializeField] AudioClip pasos;
+    [Tooltip("Volumen del sonido de pasos (0-1).")]
+    [SerializeField] [Range(0f, 1f)] float volumePasos = 1f;
+    [Tooltip("AudioSource del jugador para los pasos. Si no se asigna, se usa el del mismo GameObject.")]
+    [SerializeField] AudioSource audioPasos;
 
     Rigidbody2D rb;
     InputActionMap playerMap;
@@ -39,6 +48,8 @@ public class PlayerController : MonoBehaviour
             sprintAction = playerMap.FindAction("Sprint");
         }
         baseScale = transform.localScale;
+        if (audioPasos == null)
+            audioPasos = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -83,6 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             if (rb != null)
                 rb.linearVelocity = Vector2.zero;
+            UpdatePasos(false);
             return;
         }
         if (moveAction == null || rb == null)
@@ -100,6 +112,27 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = direction * speed;
 
         UpdateFacing();
+        UpdatePasos(direction.sqrMagnitude > 0.01f);
+    }
+
+    void UpdatePasos(bool walking)
+    {
+        if (audioPasos == null || pasos == null)
+            return;
+        if (walking)
+        {
+            if (!audioPasos.isPlaying)
+            {
+                audioPasos.clip = pasos;
+                audioPasos.loop = true;
+                audioPasos.volume = volumePasos;
+                audioPasos.Play();
+            }
+        }
+        else
+        {
+            audioPasos.Stop();
+        }
     }
 
     void UpdateFacing()
