@@ -57,7 +57,7 @@ public static class CreatePisoFloor
         GameObject pisoGo = CreateQuadWithMaterial(mat);
         pisoGo.name = "Piso";
         pisoGo.transform.SetParent(background, false);
-        pisoGo.transform.localPosition = Vector3.zero;
+        pisoGo.transform.localPosition = new Vector3(0f, 0f, 0.5f);
         pisoGo.transform.localRotation = Quaternion.identity;
         pisoGo.transform.localScale = new Vector3(TilesX * TileWidth, TilesY * TileHeight, 1f);
 
@@ -83,6 +83,13 @@ public static class CreatePisoFloor
         Material mat = AssetDatabase.LoadAssetAtPath<Material>(MaterialPath);
         if (mat != null)
         {
+            Shader s = mat.shader;
+            if (s == null || !s.isSupported)
+            {
+                s = Shader.Find("Unlit/Texture");
+                if (s == null) s = Shader.Find("Sprites/Default");
+                if (s != null) mat.shader = s;
+            }
             mat.mainTexture = texture;
             mat.mainTextureScale = new Vector2(TilesX, TilesY);
             EditorUtility.SetDirty(mat);
