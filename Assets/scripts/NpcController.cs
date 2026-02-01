@@ -43,6 +43,9 @@ public class NpcController : MonoBehaviour
         return happinessDeltas[choiceIndex];
     }
 
+    /// <summary>Llamado por DialogueManager al confirmar una opción. Override en herederos (p. ej. VentanaController) para reaccionar.</summary>
+    public virtual void OnChoiceSelected(int choiceIndex, string chosen) { }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsPlayer(other))
@@ -64,7 +67,7 @@ public class NpcController : MonoBehaviour
 
     public bool PlayerInRange => playerInRange;
 
-    public void StartDialogue()
+    public virtual void StartDialogue()
     {
         if (DialogueManager.Instance == null)
         {

@@ -429,6 +429,9 @@ GameObject:
   m_Component:
   - component: {fileID: 362388756}
   - component: {fileID: 362388755}
+  - component: {fileID: 362388757}
+  - component: {fileID: 362388758}
+  - component: {fileID: 362388759}
   m_Layer: 0
   m_Name: Ventana_0
   m_TagString: Untagged
@@ -510,6 +513,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &362388757
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362388754}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &362388758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362388754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d2e3f4a5b6789012345678abcdef35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackOverlay: {fileID: 0}
+  impactoCaidaVentana: {fileID: 8300000, guid: c99e5ca8476764280b0f7e5b54c9d258, type: 3}
+  speakerName: 
+  dialogueText: "*seria buena idea tirarme*"
+  dialogueChoices:
+  - "*mejor otro dia*"
+  - "*tirarse*"
+  psychedeliaDeltas:
+  - 0
+  - 0
+  happinessDeltas:
+  - 0
+  - 0
+  responseAfterChoice:
+  - "*hay trabajo por hacer...*"
+  - 
+--- !u!82 &362388759
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362388754}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_volume: 1
+  m_pitch: 1
+  m_loop: 0
+  m_mute: 0
+  m_spatialBlend: 0
+  m_rolloffMode: 0
+  m_dopplerLevel: 1
+  m_spread: 0
+  m_minDistance: 0.1
+  m_maxDistance: 500
+  m_ignoreListenerVolume: 0
+  m_PlayOnAwake: 0
 --- !u!1 &408227083
 GameObject:
   m_ObjectHideFlags: 0

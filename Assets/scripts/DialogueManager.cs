@@ -181,6 +181,8 @@ public class DialogueManager : MonoBehaviour
             if (happinessDelta != 0f && GameController.Instance != null)
                 GameController.Instance.AddHappiness(happinessDelta);
 
+            dialogueOwner?.OnChoiceSelected(choiceSelectedIndex, chosen);
+
             string[] responseLines = dialogueOwner != null ? dialogueOwner.GetResponseLinesAfterChoice(choiceSelectedIndex) : null;
             if (responseLines != null && responseLines.Length > 0)
             {

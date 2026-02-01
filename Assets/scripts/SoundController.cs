@@ -25,9 +25,25 @@ public class SoundController : MonoBehaviour
             return;
 
         if (audioPsychedelia != null)
+        {
             audioPsychedelia.volume = GameController.Instance.PsychedeliaLevel;
-
+            if (audioPsychedelia.volume > 0f && !audioPsychedelia.isPlaying)
+                audioPsychedelia.Play();
+        }
         if (audioHappiness != null)
+        {
             audioHappiness.volume = GameController.Instance.HappinessLevel;
+            if (audioHappiness.volume > 0f && !audioHappiness.isPlaying)
+                audioHappiness.Play();
+        }
+    }
+
+    /// <summary>Apaga la música de psicodelia y felicidad (p. ej. antes del sonido de impacto ventana).</summary>
+    public void StopMusic()
+    {
+        if (audioPsychedelia != null)
+            audioPsychedelia.Stop();
+        if (audioHappiness != null)
+            audioHappiness.Stop();
     }
 }
