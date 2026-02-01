@@ -6,29 +6,35 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Crea el piso con baldosas repetidas (Piso.png). Cada baldosa no supera el tamaño del personaje.
-/// Ejecutar con Escena-1 abierta: Tools > Create Piso 20x20.
+/// Tools > Create Piso 24x24 o Create Piso 80x40 (con Escena-1 abierta).
 /// </summary>
 public static class CreatePisoFloor
 {
-    const string MenuPath = "Tools/Create Piso 20x20";
+    const string MenuPath24 = "Tools/Create Piso 24x24";
+    const string MenuPath80x40 = "Tools/Create Piso 80x40";
     const string PisoSpritePath = "Assets/sprites/Piso.png";
     const string MaterialsFolder = "Assets/Materials";
     const string MaterialPath = "Assets/Materials/PisoTile.mat";
-    // Tamaño de una baldosa en unidades de mundo: <= personaje (~2.2 ancho x 4 alto)
     const float TileSizeWorld = 1f;
-    // Área de piso en unidades (donde se mueve el personaje)
-    const float FloorWidth = 24f;
-    const float FloorHeight = 24f;
-    static int TilesX => Mathf.Max(1, Mathf.RoundToInt(FloorWidth / TileSizeWorld));
-    static int TilesY => Mathf.Max(1, Mathf.RoundToInt(FloorHeight / TileSizeWorld));
+    const float FloorWidth24 = 24f;
+    const float FloorHeight24 = 24f;
 
-    [MenuItem(MenuPath, false, 2042)]
-    public static void Create()
+    [MenuItem(MenuPath24, false, 2042)]
+    public static void Create24x24() => CreateWithSize(FloorWidth24, FloorHeight24);
+
+    [MenuItem(MenuPath80x40, false, 2043)]
+    public static void Create80x40() => CreateWithSize(80f, 40f);
+
+    static void CreateWithSize(float floorWidth, float floorHeight)
     {
+        int tilesX = Mathf.Max(1, Mathf.RoundToInt(floorWidth / TileSizeWorld));
+        int tilesY = Mathf.Max(1, Mathf.RoundToInt(floorHeight / TileSizeWorld));
+        string title = $"Piso {tilesX}x{tilesY}";
+
         Texture2D texture = GetPisoTexture();
         if (texture == null)
         {
-            EditorUtility.DisplayDialog("Piso 20x20", "No se encontró la textura de Piso en " + PisoSpritePath, "OK");
+            EditorUtility.DisplayDialog(title, "No se encontró la textura de Piso en " + PisoSpritePath, "OK");
             return;
         }
 
@@ -37,24 +43,24 @@ public static class CreatePisoFloor
         if (!AssetDatabase.IsValidFolder("Assets/Materials"))
             AssetDatabase.CreateFolder("Assets", "Materials");
 
-        Material mat = CreateOrLoadMaterial(texture);
+        Material mat = CreateOrLoadMaterial(texture, tilesX, tilesY);
         if (mat == null)
         {
-            EditorUtility.DisplayDialog("Piso 20x20", "No se pudo crear o cargar el material PisoTile.", "OK");
+            EditorUtility.DisplayDialog(title, "No se pudo crear o cargar el material PisoTile.", "OK");
             return;
         }
 
         Transform background = FindBackground();
         if (background == null)
         {
-            EditorUtility.DisplayDialog("Piso 20x20", "No se encontró el GameObject 'Background' en la escena. Abre Escena-1 y vuelve a ejecutar.", "OK");
+            EditorUtility.DisplayDialog(title, "No se encontró el GameObject 'Background' en la escena. Abre Escena-1 y vuelve a ejecutar.", "OK");
             return;
         }
 
         Transform existingPiso = background.Find("Piso");
         if (existingPiso != null)
         {
-            if (!EditorUtility.DisplayDialog("Piso 20x20", "Ya existe un hijo 'Piso' bajo Background. ¿Reemplazarlo?", "Sí", "No"))
+            if (!EditorUtility.DisplayDialog(title, "Ya existe un hijo 'Piso' bajo Background. ¿Reemplazarlo?", "Sí", "No"))
                 return;
             Object.DestroyImmediate(existingPiso.gameObject);
         }
@@ -64,15 +70,15 @@ public static class CreatePisoFloor
         pisoGo.transform.SetParent(background, false);
         pisoGo.transform.localPosition = new Vector3(0f, 0f, 0.5f);
         pisoGo.transform.localRotation = Quaternion.identity;
-        pisoGo.transform.localScale = new Vector3(FloorWidth, FloorHeight, 1f);
+        pisoGo.transform.localScale = new Vector3(floorWidth, floorHeight, 1f);
 
         Transform square = background.Find("Square");
         if (square != null)
             square.gameObject.SetActive(false);
 
-        Undo.RegisterCreatedObjectUndo(pisoGo, "Create Piso 20x20");
+        Undo.RegisterCreatedObjectUndo(pisoGo, title);
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
-        EditorUtility.DisplayDialog("Piso 20x20", $"Piso creado: {TilesX}x{TilesY} baldosas de {TileSizeWorld} unidad(es), ninguna mayor que el personaje. El hijo 'Square' se desactivó.", "OK");
+        EditorUtility.DisplayDialog(title, $"Piso creado: {tilesX}x{tilesY} baldosas de {TileSizeWorld} unidad(es). El hijo 'Square' se desactivó.", "OK");
     }
 
     static void EnsureTextureRepeats(string assetPath)
@@ -93,7 +99,7 @@ public static class CreatePisoFloor
         return AssetDatabase.LoadAssetAtPath<Texture2D>(PisoSpritePath);
     }
 
-    static Material CreateOrLoadMaterial(Texture2D texture)
+    static Material CreateOrLoadMaterial(Texture2D texture, int tilesX, int tilesY)
     {
         Material mat = AssetDatabase.LoadAssetAtPath<Material>(MaterialPath);
         if (mat != null)
@@ -106,7 +112,7 @@ public static class CreatePisoFloor
                 if (s != null) mat.shader = s;
             }
             mat.mainTexture = texture;
-            mat.mainTextureScale = new Vector2(TilesX, TilesY);
+            mat.mainTextureScale = new Vector2(tilesX, tilesY);
             EditorUtility.SetDirty(mat);
             AssetDatabase.SaveAssets();
             return mat;
@@ -122,7 +128,7 @@ public static class CreatePisoFloor
 
         mat = new Material(shader);
         mat.mainTexture = texture;
-        mat.mainTextureScale = new Vector2(TilesX, TilesY);
+        mat.mainTextureScale = new Vector2(tilesX, tilesY);
         AssetDatabase.CreateAsset(mat, MaterialPath);
         return mat;
     }
