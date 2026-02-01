@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Lee PsychedeliaLevel y HappinessLevel de GameController y aplica esos valores
 /// como volumen a dos AudioSource (psicodelia y felicidad). No modifica los niveles.
+/// Psicodelia tiene prioridad: si PsychedeliaLevel &gt; 0, la música de felicidad se apaga.
 /// </summary>
 public class SoundController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class SoundController : MonoBehaviour
     [Tooltip("Pista cuyo volumen sigue GameController.PsychedeliaLevel (0-1).")]
     [SerializeField] AudioSource audioPsychedelia;
 
-    [Tooltip("Pista cuyo volumen sigue GameController.HappinessLevel (0-1).")]
+    [Tooltip("Pista cuyo volumen sigue GameController.HappinessLevel (0-1). Se apaga cuando hay música de psicodelia (prioridad psicodelia).")]
     [SerializeField] AudioSource audioHappiness;
 
     [Tooltip("Volumen máximo de las pistas (0-1). El nivel del juego se multiplica por este valor.")]
@@ -90,9 +91,17 @@ public class SoundController : MonoBehaviour
         }
         if (audioHappiness != null)
         {
-            audioHappiness.volume = GameController.Instance.HappinessLevel * volumeMax;
-            if (audioHappiness.volume > 0f && !audioHappiness.isPlaying)
-                audioHappiness.Play();
+            if (GameController.Instance.PsychedeliaLevel > 0f)
+            {
+                audioHappiness.volume = 0f;
+                audioHappiness.Stop();
+            }
+            else
+            {
+                audioHappiness.volume = GameController.Instance.HappinessLevel * volumeMax;
+                if (audioHappiness.volume > 0f && !audioHappiness.isPlaying)
+                    audioHappiness.Play();
+            }
         }
 
         bool playOficina = SceneManager.GetActiveScene().name == gameSceneName
