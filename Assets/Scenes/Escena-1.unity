@@ -2744,6 +2744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: impactoCaidaVentana
+      value: 
+      objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2771,6 +2775,10 @@ PrefabInstance:
       value: '*Podria tomar un poco de agua*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2778,6 +2786,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a393679d45fb14873b6cdf1ff4d874a8, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
@@ -2916,12 +2928,20 @@ PrefabInstance:
       value: '*Ves un caramelo en el fondo...*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: happinessDeltas.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
@@ -2947,14 +2967,6 @@ PrefabInstance:
       propertyPath: responseAfterChoice.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
-      propertyPath: audioOnChoice.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
-      propertyPath: audioOnChoice.Array.data[0]
-      value: 
-      objectReference: {fileID: 0, guid: 666912939369c4568a990297f2bd0ce9, type: 3}
     - target: {fileID: 94401391091668240, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3999,6 +4011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834608677}
   - component: {fileID: 834608676}
+  - component: {fileID: 834608678}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -4021,6 +4034,8 @@ MonoBehaviour:
   dialogueUI: {fileID: 722828082}
   secondsPerCharacter: 0.03
   inputActions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
+  voiceDialogueClip: {fileID: 8300000, guid: cf25238db76c244ad92ecbd6509094b6, type: 3}
+  audioVoiceDialogue: {fileID: 834608678}
 --- !u!4 &834608677
 Transform:
   m_ObjectHideFlags: 0
@@ -4036,6 +4051,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &834608678
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834608675}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &850634131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,6 +4565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: impactoCaidaVentana
+      value: 
+      objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4512,6 +4628,10 @@ PrefabInstance:
       value: '*Parece ser un ficus*'
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4519,6 +4639,10 @@ PrefabInstance:
       propertyPath: happinessDeltas.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cfc3290131707469597ff18f192e556e, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: psychedeliaDeltas.Array.size
       value: 2
@@ -4773,6 +4897,18 @@ PrefabInstance:
       propertyPath: dialogueText
       value: '*El portero roberto hace un buen trabajo*'
       objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: audioOnChoice.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 935bdbdfc701a46e385c6f640ae4be37, type: 3}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: 'audioOnChoice.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 56fef9f3940c7475baa5a29bb872bfe8, type: 3}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: 'dialogueChoices.Array.data[0]'
       value: '*Cagar*'
@@ -5395,6 +5531,10 @@ PrefabInstance:
       value: Que quere?
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: playVoiceInDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -5623,6 +5763,10 @@ PrefabInstance:
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueText
       value: Quere proba estas pastis?...
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: playVoiceInDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: 'dialogueChoices.Array.data[0]'
@@ -6790,6 +6934,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: impactoCaidaVentana
+      value: 
+      objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6994,6 +7142,10 @@ PrefabInstance:
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueText
       value: "\u2026 \xBFPasa Algo?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
+      propertyPath: playVoiceInDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64149746943331825, guid: 790a89c5819c844aea0c8530d49b8b7e, type: 3}
       propertyPath: dialogueChoices.Array.size
@@ -7404,6 +7556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020052067619154933, guid: f798a602262b54c16ab9ea3211ac77c8, type: 3}
+      propertyPath: impactoCaidaVentana
+      value: 
+      objectReference: {fileID: 8300000, guid: e7a4b198404ae4e3a9c69a5203101986, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

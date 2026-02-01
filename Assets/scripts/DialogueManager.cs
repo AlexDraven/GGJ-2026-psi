@@ -19,6 +19,12 @@ public class DialogueManager : MonoBehaviour
     [Header("Input")]
     [SerializeField] InputActionAsset inputActions;
 
+    [Header("Audio voz")]
+    [Tooltip("Clip VOZ - Dialogo; se reproduce en loop mientras un NPC (personaje) habla.")]
+    [SerializeField] AudioClip voiceDialogueClip;
+    [Tooltip("AudioSource para la voz de diálogo. Si no se asigna, se usa el del mismo GameObject.")]
+    [SerializeField] AudioSource audioVoiceDialogue;
+
     string[] lines;
     string[] choices;
     string speakerName;
@@ -44,6 +50,12 @@ public class DialogueManager : MonoBehaviour
 
         if (inputActions != null)
             navigateAction = inputActions.FindActionMap("UI")?.FindAction("Navigate");
+    }
+
+    void Start()
+    {
+        if (audioVoiceDialogue == null)
+            audioVoiceDialogue = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -126,6 +138,12 @@ public class DialogueManager : MonoBehaviour
 
         var fullText = lines[lineIndex];
         dialogueUI.SetDialogueText("");
+        if (dialogueOwner != null && dialogueOwner.PlayVoiceInDialogue && voiceDialogueClip != null && audioVoiceDialogue != null)
+        {
+            audioVoiceDialogue.clip = voiceDialogueClip;
+            audioVoiceDialogue.loop = true;
+            audioVoiceDialogue.Play();
+        }
         typewriterRunning = true;
         typewriterCoroutine = StartCoroutine(TypewriterRoutine(fullText));
     }
@@ -146,6 +164,7 @@ public class DialogueManager : MonoBehaviour
 
         typewriterRunning = false;
         typewriterCoroutine = null;
+        audioVoiceDialogue?.Stop();
 
         if (lineIndex == lines.Length - 1 && choices != null && choices.Length > 0)
         {
@@ -202,6 +221,7 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(typewriterCoroutine);
             typewriterCoroutine = null;
             typewriterRunning = false;
+            audioVoiceDialogue?.Stop();
             if (lines != null && lineIndex < lines.Length)
                 dialogueUI.SetDialogueText(lines[lineIndex]);
             // Si es la última línea y hay opciones, avanzar para mostrarlas
@@ -225,6 +245,7 @@ public class DialogueManager : MonoBehaviour
             typewriterCoroutine = null;
         }
 
+        audioVoiceDialogue?.Stop();
         typewriterRunning = false;
         IsInDialogue = false;
         if (GameController.Instance != null)

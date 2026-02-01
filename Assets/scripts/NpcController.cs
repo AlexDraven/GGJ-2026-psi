@@ -15,8 +15,13 @@ public class NpcController : MonoBehaviour
     [SerializeField] string[] responseAfterChoice;
     [Tooltip("Opcional: sonido a reproducir al elegir cada opción (índice 0 = primera opción). Ej: VOZ Comiendo para la opción de comer yogurt.")]
     [SerializeField] AudioClip[] audioOnChoice;
+    [Tooltip("Si true, se reproduce VOZ - Dialogo mientras este NPC habla (solo personajes, no objetos).")]
+    [SerializeField] bool playVoiceInDialogue;
 
     bool playerInRange;
+
+    /// <summary>True si el DialogueManager debe reproducir VOZ - Dialogo mientras este NPC habla.</summary>
+    public bool PlayVoiceInDialogue => playVoiceInDialogue;
 
     /// <summary>Devuelve las líneas de respuesta para la opción elegida, o null si no hay.</summary>
     public string[] GetResponseLinesAfterChoice(int choiceIndex)
