@@ -2,6 +2,8 @@
 
 Documento de referencia del gameplay del juego. Está pensado para **desarrolladores** y **agentes de IA**: cualquier agente que extienda o modifique el juego debe usar este archivo como contexto para entender el diseño objetivo y la base de código existente.
 
+**Global Game Jam:** Este proyecto es un juego de **Global Game Jam**. Conviene tener en cuenta tiempo y alcance limitados: priorizar pocos scripts, soluciones simples y features acotadas.
+
 ---
 
 ## 1. Propósito del documento
@@ -59,8 +61,9 @@ flowchart LR
 
 ### 4.1 Interacción: NPCs y objetos
 
-- **Quién puede dar diálogo:** NPCs (ya soportados) y **objetos** (objetivo futuro: mismos datos de diálogo + opciones + configuración de consecuencias).
-- **Datos por NPC/objeto:**
+- **Un solo componente:** Solo existe **NpcController** (`Assets/scripts/NpcController.cs`). Se **reutiliza** tanto para NPCs como para **objetos interactuables**; no hay un componente distinto para objetos. En ambos casos el mismo contrato: diálogo + opciones + deltas de psicodelia y felicidad.
+- **Quién puede dar diálogo:** Cualquier GameObject con **NpcController** (personaje NPC o objeto: ventana, heladera, etc.). Mismos datos de diálogo, opciones y configuración de consecuencias.
+- **Datos por NPC/objeto (en NpcController):**
   - Texto del diálogo (líneas).
   - Opciones de respuesta (lista de strings).
   - **Configuración por opción:** Para cada opción (índice 0, 1, 2…), definir:
@@ -68,7 +71,7 @@ flowchart LR
     - **Delta de felicidad** (aumentar o disminuir; ej. +10, -5).
   - Opcional: nombre del hablante (para NPCs; objetos pueden usar un nombre o “Objeto”).
 
-**Base actual:** `Assets/scripts/NpcController.cs` tiene `speakerName`, `dialogueText`, `dialogueChoices` y un único `choiceIndexThatTriggersEffect` que hoy solo sube psicodelia para una opción. Falta: configuración por opción con deltas de psicodelia y felicidad (subir/bajar ambos).
+**Base actual:** `Assets/scripts/NpcController.cs` tiene `speakerName`, `dialogueText`, `dialogueChoices` y un único `choiceIndexThatTriggersEffect` que hoy solo sube psicodelia para una opción. Falta: configuración por opción con deltas de psicodelia y felicidad (subir/bajar ambos). Los objetos interactuables se implementan añadiendo **NpcController** al GameObject correspondiente (sin nuevo script).
 
 ### 4.2 Flujo de diálogo
 
@@ -125,15 +128,15 @@ flowchart LR
 | Nivel psicodelia (estado global) | GameController (PsychedeliaLevel) | Por implementar; efecto cámara lee de aquí |
 | Nivel felicidad (estado global) | GameController (HappinessLevel) | Por implementar; cara Doom lee de aquí |
 | Cara personaje (Doom) | — | Por implementar |
-| Objetos interactuables | — | Por implementar (mismo contrato que NPC: diálogo + opciones + deltas) |
+| Objetos interactuables | NpcController (reutilizado) | Por implementar: mismo NpcController en el GameObject del objeto; mismo contrato (diálogo + opciones + deltas) |
 | Sonido según psicodelia/felicidad | SoundController (lee niveles de GameController, aplica volumen a 2 audios) | Por implementar |
 
 ---
 
 ## 7. Especificaciones para agentes IA
 
-- **Ubicación de datos de diálogo:** NpcController en el inspector (y en el futuro, un componente equivalente en objetos). Extensión: por cada opción, dos valores numéricos (delta psicodelia, delta felicidad).
+- **Ubicación de datos de diálogo:** **Solo NpcController** en el inspector; se reutiliza para NPCs y para objetos interactuables (no hay componente aparte para objetos). Extensión: por cada opción, dos valores numéricos (delta psicodelia, delta felicidad).
 - **Dónde persistir niveles:** **GameController** lleva el estado con `PsychedeliaLevel` y `HappinessLevel`. PsychedelicCameraEffect lee el nivel de psicodelia de GameController y aplica esa intensidad al efecto de cámara; el componente de la cara Doom lee el nivel de felicidad de GameController y aplica la expresión/frame correspondiente.
-- **Contrato de DialogueManager al confirmar opción:** Recibir el índice elegido y el `owner` (NpcController u objeto); el owner proporciona los deltas para ese índice; el juego aplica los deltas y actualiza UI/cámara.
+- **Contrato de DialogueManager al confirmar opción:** Recibir el índice elegido y el `owner` (siempre **NpcController**, tanto si es un NPC como si es un objeto interactuable); el owner proporciona los deltas para ese índice; el juego aplica los deltas y actualiza UI/cámara.
 - **Input:** Se usa Input System con action maps `"Player"` y `"UI"`; durante el diálogo el movimiento está deshabilitado y la navegación de opciones usa `"UI/Navigate"`.
 - **Sonidos:** **SoundController** es un script que lee `PsychedeliaLevel` y `HappinessLevel` de GameController y asigna esos valores al volumen de dos AudioSources (o audios) configurados en el inspector: uno para psicodelia, otro para felicidad.
