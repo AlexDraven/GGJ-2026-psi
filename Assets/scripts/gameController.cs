@@ -154,6 +154,8 @@ public class GameController : MonoBehaviour
         if (piñaSprite == null)
             yield break;
 
+        SetInVentanaSequence(true);
+
         var canvasGo = new GameObject("GustaBotPiñaOverlay");
         var canvas = canvasGo.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -185,8 +187,6 @@ public class GameController : MonoBehaviour
         var image = imageGo.AddComponent<Image>();
         image.color = Color.black;
         image.preserveAspect = false;
-
-        SetInVentanaSequence(true);
 
         SoundController.SuppressMusic = true;
         var soundController = FindFirstObjectByType<SoundController>();

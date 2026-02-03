@@ -70,11 +70,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Con diálogo o secuencia pantalla completa (ventana/trompada), desactivar Move y Sprint
-        if (gameController != null && (gameController.IsInDialogue || gameController.IsInVentanaSequence))
+        var gc = gameController != null ? gameController : GameController.Instance;
+        bool inCutscene = gc != null && (gc.IsInDialogue || gc.IsInVentanaSequence);
+
+        // Con diálogo o secuencia pantalla completa (ventana/trompada), desactivar Move y Sprint y anular velocidad
+        if (inCutscene)
         {
             moveAction?.Disable();
             sprintAction?.Disable();
+            if (rb != null)
+                rb.linearVelocity = Vector2.zero;
+            UpdatePasos(false);
         }
         else
         {
@@ -84,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
         bool interactPressed = (interactAction != null && interactAction.triggered)
             || (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame);
-        if (interactPressed)
+        if (interactPressed && (gc == null || !gc.IsInVentanaSequence))
             OnInteract();
         if (!CanAct())
             return;
@@ -92,6 +98,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        var gc = gameController != null ? gameController : GameController.Instance;
         if (!CanAct())
         {
             if (rb != null)
@@ -99,7 +106,7 @@ public class PlayerController : MonoBehaviour
             UpdatePasos(false);
             return;
         }
-        if (gameController != null && gameController.IsInVentanaSequence)
+        if (gc != null && gc.IsInVentanaSequence)
         {
             if (rb != null)
                 rb.linearVelocity = Vector2.zero;
@@ -154,9 +161,12 @@ public class PlayerController : MonoBehaviour
 
     bool CanAct()
     {
-        if (gameController == null)
+        var gc = gameController != null ? gameController : GameController.Instance;
+        if (gc == null)
             return true;
-        return gameController.CurrentState == GameController.GameState.Playing && !gameController.IsInDialogue;
+        return gc.CurrentState == GameController.GameState.Playing
+            && !gc.IsInDialogue
+            && !gc.IsInVentanaSequence;
     }
 
     void OnInteract()
