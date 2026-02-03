@@ -82,7 +82,9 @@ public class PlayerController : MonoBehaviour
             sprintAction?.Enable();
         }
 
-        if (interactAction != null && interactAction.triggered)
+        bool interactPressed = (interactAction != null && interactAction.triggered)
+            || (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame);
+        if (interactPressed)
             OnInteract();
         if (!CanAct())
             return;
