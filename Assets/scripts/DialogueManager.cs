@@ -56,6 +56,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (audioVoiceDialogue == null)
             audioVoiceDialogue = GetComponent<AudioSource>();
+        if (audioVoiceDialogue == null)
+            audioVoiceDialogue = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -138,7 +140,8 @@ public class DialogueManager : MonoBehaviour
 
         var fullText = lines[lineIndex];
         dialogueUI.SetDialogueText("");
-        if (lineIndex > 0 && dialogueOwner != null && dialogueOwner.PlayVoiceInDialogue && voiceDialogueClip != null && audioVoiceDialogue != null)
+        // Reproducir voz desde la primera línea (lineIndex >= 0) para que en WebGL el Play() ocurra en la misma gesta del usuario (E) y no sea bloqueado por la política de autoplay.
+        if (dialogueOwner != null && dialogueOwner.PlayVoiceInDialogue && voiceDialogueClip != null && audioVoiceDialogue != null)
         {
             audioVoiceDialogue.clip = voiceDialogueClip;
             audioVoiceDialogue.loop = true;
