@@ -198,7 +198,10 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if (sonidoTrompada != null)
-            AudioSource.PlayClipAtPoint(sonidoTrompada, Vector3.zero, 1f);
+        {
+            Vector3 listenerPos = Camera.main != null ? Camera.main.transform.position : Vector3.zero;
+            AudioSource.PlayClipAtPoint(sonidoTrompada, listenerPos, 1f);
+        }
 
         float waitTime = (sonidoTrompada != null) ? sonidoTrompada.length : 1f;
         yield return new WaitForSeconds(2f);
