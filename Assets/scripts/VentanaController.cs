@@ -76,9 +76,11 @@ public class VentanaController : NpcController
 
         yield return new WaitForSeconds(1f);
 
-        var audioSource = ventanaAudio;
-        if (audioSource != null && impactoCaidaVentana != null)
-            audioSource.PlayOneShot(impactoCaidaVentana);
+        if (impactoCaidaVentana != null)
+        {
+            Vector3 listenerPos = Camera.main != null ? Camera.main.transform.position : Vector3.zero;
+            AudioSource.PlayClipAtPoint(impactoCaidaVentana, listenerPos, 1f);
+        }
 
         float waitTime = (impactoCaidaVentana != null) ? impactoCaidaVentana.length : 1f;
         yield return new WaitForSeconds(6f);
